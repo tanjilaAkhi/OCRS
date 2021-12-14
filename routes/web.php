@@ -3,6 +3,7 @@
 use App\Http\Controllers\Backend\PolicestationController;
 use App\Http\Controllers\Backend\Complaint_typeController;
 use App\Http\Controllers\Backend\ComplainerController;
+use App\Http\Controllers\Backend\NidController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
    // return redirect()->route('admin');
-   return ('main');
+   return view ('user.main');
 });
 
 
@@ -42,5 +43,13 @@ Route::group(['prefix'=>'admin-portal'],function(){
     
     Route::get('/complainers',[ComplainerController::class,'complainerList'])->name('admin.complainers');
     //end complainer list
+
+    //NID information Code
+   
+    Route::get('/nids',[NidController::class,'nidList'])->name('admin.nids');//list show koranor jonno
+    Route::get('/nids/create',[NidController::class,'nidCreate'])->name('admin.nids.create');// form create korer jonno
+    Route::post('/nids/store',[NidController::class,'store'])->name('admin.nids.store');//database a data submit korer  jonno
+  
+    //End NID information Code
     
 });

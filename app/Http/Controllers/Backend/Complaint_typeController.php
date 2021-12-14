@@ -24,6 +24,19 @@ class Complaint_typeController extends Controller
     
     public function complaint_typeStore(Request $request)
     {
+
+
+        //validation
+        $request->validate([
+
+            'casenumber'=>'required',
+            'casetype'=>'required',
+            'casedetails'=>'required',
+            
+
+        ]);
+
+
         complainttype::create([
             // field name from DB ||  field name from form
             'casenumber'=>$request->casenumber,

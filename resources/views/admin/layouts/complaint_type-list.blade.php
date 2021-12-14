@@ -2,6 +2,19 @@
 
 @section('content')
 
+<!--jokhon requirement onojaye data dibo na-->
+@if($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+<!--end error sms section-->
+
+
 <h1>Complaint Type list</h1>
 <a href="{{route('admin.complaint_types.create')}}" class="btn btn-success">Create new Complaint Type</a>
 

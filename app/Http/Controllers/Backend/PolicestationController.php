@@ -21,6 +21,20 @@ class PolicestationController extends Controller
 
     public function store(Request $request)
     {
+
+
+       
+
+        //validation
+        $request->validate([
+
+            'dmp'=>'required',
+            'name'=>'required',
+            'address'=>'required',
+            'cell'=>'required|min:11',
+            'email'=>'required|email',
+
+        ]);
         // dd($request->all());
         policestation::create([
             // field name from DB ||  field name from form
