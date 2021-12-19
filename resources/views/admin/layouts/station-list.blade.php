@@ -4,15 +4,7 @@
 
 
 
-@if ($errors->any())
-    <div class="alert alert-danger">
-        <ul>
-            @foreach ($errors->all() as $error)
-                <li>{{ $error }}</li>
-            @endforeach
-        </ul>
-    </div>
-@endif
+
 
     <h1>Police Station list</h1>
     <a href="{{route('admin.stations.create')}}" class="btn btn-success">Create new Police Station</a>

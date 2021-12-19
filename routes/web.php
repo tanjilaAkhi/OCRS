@@ -5,6 +5,10 @@ use App\Http\Controllers\Backend\Complaint_typeController;
 use App\Http\Controllers\Backend\ComplainerController;
 use App\Http\Controllers\Backend\NidController;
 use Illuminate\Support\Facades\Route;
+//use App\Http\Controllers\user\HomeController;
+use App\Http\Controllers\Frontend\UserController;
+use App\Http\Controllers\Frontend\ContactController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -17,11 +21,31 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-   // return redirect()->route('admin');
-   return view ('user.main');
-});
 
+    Route::get('/', function () {
+        return view('user.master');
+    });
+
+
+    //Contact
+Route::get('/contact',[ContactController::class,'contact'])->name('user.contact');
+//end Contact
+
+//Emergency contact
+Route::get('/emergencycontact',[ContactController::class,'emergencycontact'])->name('user.emergencycontact');
+//end emergency contact
+
+//NID verification
+Route::get('/verification',[UserController::class,'verification'])->name('user.verification');
+
+
+
+
+//end user panel related
+
+
+
+//admin panel related
 
 Route::group(['prefix'=>'admin-portal'],function(){
     Route::get('/', function () {
@@ -52,4 +76,5 @@ Route::group(['prefix'=>'admin-portal'],function(){
   
     //End NID information Code
     
-});
+});//end admin panel
+
