@@ -33,6 +33,7 @@
         <td>{{$policestation->telephone}}</td>
         <td>{{$policestation->cell}}</td>
         <td>{{$policestation->email}}</td>
+        <td ><a href="#" class="btn btn-success">View</a></td>
         <td ><a href="#" class="btn btn-success">Edit</a></td>
        
         

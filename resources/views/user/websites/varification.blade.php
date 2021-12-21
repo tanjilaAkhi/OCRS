@@ -1,6 +1,4 @@
 
-
-
 <h1 style="color: White; text-align:center; " >Enter Your NID Number</h1>
     
 
@@ -126,7 +124,7 @@ margin-left: 4px;
 	<div class="d-flex justify-content-center h-100">
 		<div class="card">
 			<div class="card-header">
-				<h3>Verification</h3>
+				<h3> NID Verification</h3>
 				
 			</div>
 			<div class="card-body">

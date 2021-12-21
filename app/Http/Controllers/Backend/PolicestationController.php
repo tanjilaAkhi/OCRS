@@ -31,7 +31,7 @@ class PolicestationController extends Controller
             'dmp'=>'required',
             'name'=>'required',
             'address'=>'required',
-            'cell'=>'required|min:11',
+            'cell'=>'required',
             'email'=>'required|email',
 
         ]);

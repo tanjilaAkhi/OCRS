@@ -4,8 +4,8 @@ use App\Http\Controllers\Backend\PolicestationController;
 use App\Http\Controllers\Backend\Complaint_typeController;
 use App\Http\Controllers\Backend\ComplainerController;
 use App\Http\Controllers\Backend\NidController;
+use App\Http\Controllers\Backend\LoginController;
 use Illuminate\Support\Facades\Route;
-//use App\Http\Controllers\user\HomeController;
 use App\Http\Controllers\Frontend\UserController;
 use App\Http\Controllers\Frontend\ContactController;
 
@@ -22,12 +22,12 @@ use App\Http\Controllers\Frontend\ContactController;
 */
 
 
-    Route::get('/', function () {
+    Route::get('/user', function () {
         return view('user.master');
     });
 
 
-    //Contact
+//Contact
 Route::get('/contact',[ContactController::class,'contact'])->name('user.contact');
 //end Contact
 
@@ -47,10 +47,21 @@ Route::get('/verification',[UserController::class,'verification'])->name('user.v
 
 //admin panel related
 
+
+
 Route::group(['prefix'=>'admin-portal'],function(){
+
+//Admin login
+Route::get('/login',[LoginController::class,'page'])->name('admin.login');
+Route::post('/login',[LoginController::class,'login'])->name('admin.do.login');
+// //end Admin login 
+
+  Route::group(['middleware'=>'auth'],function (){ //middleware applied in the whole section to prevent the unauthorized access
     Route::get('/', function () {
         return view('admin.master');
     })->name('admin');
+
+
     //pilce station//
     Route::get('/stations',[PolicestationController::class,'policestationList'])->name('admin.stations');//list show koranor jonno
     Route::get('/stations/create',[PolicestationController::class,'stationCreate'])->name('admin.stations.create');// form create korer jonno
@@ -77,4 +88,6 @@ Route::group(['prefix'=>'admin-portal'],function(){
     //End NID information Code
     
 });//end admin panel
+
+});
 
