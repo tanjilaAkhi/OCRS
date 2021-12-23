@@ -66,5 +66,32 @@ class PolicestationController extends Controller
        return redirect()->back()->with('success','Policestation is Deleted.');
     }
 
+    public function policestationEdit($id){
+        // dd($id);
+        $policestations = policestation::all();
+       $policestation = policestation::find($id);
+        if ($policestation) {
+            return view('admin.layouts.update-policestation',compact('policestation'));
+        }
+
+    }
+
+    public function policestationUpdate(Request $request,$id){
+        //dd($request->all());
+        $policestation = policestation::find($id);
+        if ($policestation) {
+            $policestation->update([
+                'dmp'=>$request->dmp,
+            'name'=>$request->name,
+            'address'=>$request->address,
+            'telephone'=>$request->telephone,
+            'cell'=>$request->cell,
+            'email'=>$request->email,
+            ]);
+            return redirect()->route('admin.stations');
+        }
+    }
+
+
 
 }

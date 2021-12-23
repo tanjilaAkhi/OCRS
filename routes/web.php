@@ -76,7 +76,7 @@ Route::post('/login',[LoginController::class,'login'])->name('admin.do.login');
     Route::get('/stations/view/{station_id}',[PolicestationController::class,'policestationDetails'])->name('admin.station.details');
     Route::get('/stations/delete/{station_id}',[PolicestationController::class,'policestationDelete'])->name('admin.station.delete');
     Route::get('/stations/edit/{id}',[PolicestationController::class,'policestationEdit'])->name('admin.station.edit');
-    //Route::put('/product/update/{id}',[ProductController::class,'productUpdate'])->name('admin.product.update');
+    Route::put('/stations/update/{id}',[PolicestationController::class,'policestationUpdate'])->name('admin.station.update');
     
     
     
