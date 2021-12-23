@@ -34,7 +34,9 @@
         <td>{{$Nid->email}}</td>
         <td>{{$Nid->birthday}}</td>
         <td>{{$Nid->address}}</td>
+        <td ><a href="#" class="btn btn-success">View</a></td>
         <td ><a href="#" class="btn btn-success">Edit</a></td>
+        <td ><a href="#" class="btn btn-success">Delete</a></td>
        
         
     </tr>

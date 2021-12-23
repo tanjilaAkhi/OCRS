@@ -44,7 +44,7 @@ class Complaint_typeController extends Controller
             'casedetails'=>$request->casedetails,
             
         ]);
-        return redirect()->route('admin.complaint_typs');//back();
+        return redirect()->route('admin.complaint_types');//back();
     }
     //end store info into the database
     

@@ -1,164 +1,177 @@
 
 <h1 style="color: White; text-align:center; " >Enter Your NID Number</h1>
     
-
 <form action="" method="POST">
-    @csrf
+        @csrf
+<!-- css file -->
+<style>
+/*-----Background-----*/
 
-
-    <style>
-
-/* Made with love by Mutiullah Samim*/
-
-@import url('https://fonts.googleapis.com/css?family=Numans');
-
-html,body{
-background-image: url('http://getwallpapers.com/wallpaper/full/a/5/d/544750.jpg');
-background-size: cover;
-background-repeat: no-repeat;
-height: 100%;
-font-family: 'Numans', sans-serif;
+body{
+	 background-image:url(https://s3.envato.com/files/243754334/primag.jpg);
+	 background-repeat:no-repeat;
+	 background-size:cover;
+	 width:100%;
+	 height:100vh;
+	 overflow:auto;
+	 
 }
 
+/*-----for border----*/
 .container{
-height: 100%;
-align-content: center;
+	font-family:Roboto,sans-serif;
+	  background-image:url(https://image.freepik.com/free-vector/dark-blue-blurred-background_1034-589.jpg) ;
+    
+     border-style: 1px solid grey;
+     margin: 0 auto;
+     text-align: center;
+     opacity: 0.8;
+     margin-top: 67px;
+   box-shadow: 2px 5px 5px 0px #eee;
+     max-width: 500px;
+     padding-top: 10px;
+     height: 363px;
+     margin-top: 166px;
 }
 
-.card{
-height: 370px;
-margin-top: auto;
-margin-bottom: auto;
-width: 400px;
-background-color: rgba(0,0,0,0.5) !important;
+	  
+
+/*---for heading-----*/
+.heading{
+	 text-decoration:bold;
+	 text-align : center;
+	 font-size:30px;
+	 color:#F96;
+	 padding-top:10px;
+}
+/*-------for email----------*/
+  /*------label----*/
+
+.pass{
+	 color: white;
+     margin-top: 9px;
+     font-size: 14px;
+     font-family: sans-serif;
+     margin-left: 6px;
+     margin-top: 9px;
+}
+#password{
+ margin-top: 6px;
+}
+/*------------for phone Number--------*/
+      /*----------label--------*/
+.pno{
+	 font-size: 18px;
+     margin-left: -13px;
+     margin-top: 10px;
+     color: #ff9;
+	
+}	
+
+/*--------------for Gender---------------*/
+     /*--------------label---------*/
+.gender {
+	 color: white;
+     font-family: sans-serif;
+     font-size: 14px;
+     margin-left: 28px;
+     margin-top: 8px;
+	
 }
 
-.social_icon span{
-font-size: 60px;
-margin-left: 10px;
-color: #FFC312;
-}
+     
+/*------------For submit button---------*/
+.sbutton{
+	 color: white;
+     font-size: 20px;
+     border: 1px solid white;
+     background-color: #080808;
+     width: 32%;
+     margin-left: 41%;
+     margin-top: 16px;
+	 box-shadow: 0px 2px 2px 0px white;
+  	   
+   }
+.btn.btn-warning:hover {
+    box-shadow: 2px 1px 2px 3px #99ccff;
+	background:#5900a6;
+	color:#fff;
+	transition: background-color 1.15s ease-in-out,border-color 1.15s ease-in-out,box-shadow 1.15s ease-in-out;
+	
+}	 
+	  
 
-.social_icon span:hover{
-color: white;
-cursor: pointer;
-}
+</style>
+  
 
-.card-header h3{
-color: white;
-}
 
-.social_icon{
-position: absolute;
-right: 20px;
-top: -45px;
-}
-
-.input-group-prepend span{
-width: 50px;
-background-color: #FFC312;
-color: black;
-border:0 !important;
-}
-
-input:focus{
-outline: 0 0 0 0  !important;
-box-shadow: 0 0 0 0 !important;
-
-}
-
-.remember{
-color: white;
-}
-
-.remember input
-{
-width: 20px;
-height: 20px;
-margin-left: 15px;
-margin-right: 5px;
-}
-
-.login_btn{
-color: black;
-background-color: #FFC312;
-width: 100px;
-}
-
-.login_btn:hover{
-color: black;
-background-color: white;
-}
-
-.links{
-color: white;
-}
-
-.links a{
-margin-left: 4px;
-}
-
-    </style>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <!------ Include the above in your HEAD tag ---------->
 
-<!DOCTYPE html>
+<!Doctype html>
 <html>
 <head>
-	<title>NID Verification Page</title>
-   <!--Made with love by Mutiullah Samim -->
-   
-	<!--Bootsrap 4 CDN-->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    
-    <!--Fontawesome CDN-->
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-
-	<!--Custom styles-->
-	<link rel="stylesheet" type="text/css" href="styles.css">
+     <meta charset="UTF-8">
+     <title>Verification Form</title>
+     	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<div class="container">
-	<div class="d-flex justify-content-center h-100">
-		<div class="card">
-			<div class="card-header">
-				<h3> NID Verification</h3>
+ <div class="container">
+ <!---heading---->
+     <header class="heading"> Verification-Form</header><hr></hr>
+	<!---Form starting----> 
+	<div class="row ">
+	 
+	 <!-----For Password and confirm password---->
+          <div class="col-sm-12">
+		         <div class="row">
 				
-			</div>
-			<div class="card-body">
-				<form>
-					<div class="input-group form-group">
-						<div class="input-group-prepend">
-							<span class="input-group-text"><i class="fas fa-user"></i></span>
-						</div>
-						<input type="text" class="form-control" placeholder="nid number">
+				     <div class="col-xs-4">
+					
+							   <label for="password" class="text-info">NID Number</label>
+							   
+							  
+							</div>
 						
-					</div>
-				
-					<div class="row align-items-center remember">
-						<input type="checkbox">Remember Me
-					</div>
-					<div class="form-group">
-						<input type="submit" value="Submit" class="btn float-right login_btn">
-					</div>
-				</form>
-			</div>
-			<div class="card-footer">
-				<div class="d-flex justify-content-center links">
-					Don't have NID ?<a href="#"> Verified</a>
-				</div>
-				<div class="d-flex justify-content-center">
-					<a href="#">Forgot your NID Number?</a>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-</body>
-</html>
-</form>
+				  <div class="col-xs-8">
+			             <input name="password" type="password"  placeholder="Enter your nid number" class="form-control" require>
+				 </div>
+          </div>
+		  </div>
+</br>
+</br>
+</br>
+</br>
 
+
+		  
+<!-----------For Phone number-------->
+<div class="col-sm-12" style="color: White; text-align:center; ">
+		     <!-- <div class ="row">
+                 <div class="col-xs-4 " >
+			       <p >Do you have NID?Verified</P>
+				 </div>
+			  -->
+			     
+			
+		  	 <!-- </div> -->
+		     <div class="col-sm-12">
+		         
+				 <button type="submit" class="btn btn-warning">Submit</button>
+		   </div>
+		 </div>
+	 </div>	 	 
+		 		 
+		 
+</div>
+
+</body>		
+</html>
+	 
+	 
+
+</form>
 
 

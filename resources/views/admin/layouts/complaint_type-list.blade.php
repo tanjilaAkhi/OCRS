@@ -36,7 +36,9 @@
         <td>{{$complainttype->casenumber}}</td>
         <td>{{$complainttype->casetype}}</td>
         <td>{{$complainttype->casedetails}}</td>
+        <td ><a href="#" class="btn btn-success">View</a></td>
         <td ><a href="#" class="btn btn-success">Edit</a></td>
+        <td ><a href="#" class="btn btn-success">Delete</a></td>
         
     </tr>
     @endforeach

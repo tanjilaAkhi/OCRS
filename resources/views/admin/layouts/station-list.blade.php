@@ -27,14 +27,15 @@
     @foreach($lists as $key=>$policestation) <!--data database theke table a show korer code (data retrive)--> 
     <tr>
         <th>{{$key+1}}</th>
-        <td>{{$policestation->dmp}}</td>
+        <td>{{$policestation->dmp}}   {{$policestation->id}}</td>
         <td>{{$policestation->name}}</td>
         <td>{{$policestation->address}}</td>
         <td>{{$policestation->telephone}}</td>
         <td>{{$policestation->cell}}</td>
         <td>{{$policestation->email}}</td>
-        <td ><a href="#" class="btn btn-success">View</a></td>
-        <td ><a href="#" class="btn btn-success">Edit</a></td>
+        <td ><a class="btn btn-success" href="{{route('admin.station.details',$policestation->id)}}" >View</a></td>
+        <td ><a class="btn btn-success" href="{{route('admin.station.edit',$policestation->id)}}" >Edit</a></td>
+        <td ><a class="btn btn-success" href="{{route('admin.station.delete',$policestation->id)}}" >Delete</a></td>
        
         
     </tr>

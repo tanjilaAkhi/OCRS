@@ -20,11 +20,11 @@ use App\Http\Controllers\Frontend\ContactController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+//Route::group(['prefix'=>'user-portal'],function(){
 
-
-    Route::get('/user', function () {
+    Route::get('/', function () {
         return view('user.master');
-    });
+    });//->name ('user');
 
 
 //Contact
@@ -37,12 +37,14 @@ Route::get('/emergencycontact',[ContactController::class,'emergencycontact'])->n
 
 //NID verification
 Route::get('/verification',[UserController::class,'verification'])->name('user.verification');
+Route::get('/form/create',[UserController::class,'caseformCreate'])->name('user.form.create');// form create korer jonno
+//Route::post('/form/store',[UserController::class,'store'])->name('admin.form.store');//database a data submit korer  jonno
 
-
+//end NID + case filed 
 
 
 //end user panel related
-
+//});
 
 
 //admin panel related
@@ -62,10 +64,23 @@ Route::post('/login',[LoginController::class,'login'])->name('admin.do.login');
     })->name('admin');
 
 
+//sign out
+    Route::get('/logout',[LoginController::class,'logout'])->name('admin.logout');
+    //end sign out
+
+
     //pilce station//
     Route::get('/stations',[PolicestationController::class,'policestationList'])->name('admin.stations');//list show koranor jonno
     Route::get('/stations/create',[PolicestationController::class,'stationCreate'])->name('admin.stations.create');// form create korer jonno
     Route::post('/stations/store',[PolicestationController::class,'store'])->name('admin.stations.store');//database a data submit korer  jonno
+    Route::get('/stations/view/{station_id}',[PolicestationController::class,'policestationDetails'])->name('admin.station.details');
+    Route::get('/stations/delete/{station_id}',[PolicestationController::class,'policestationDelete'])->name('admin.station.delete');
+    Route::get('/stations/edit/{id}',[PolicestationController::class,'policestationEdit'])->name('admin.station.edit');
+    //Route::put('/product/update/{id}',[ProductController::class,'productUpdate'])->name('admin.product.update');
+    
+    
+    
+    
     //end police station
     
     //complaint type

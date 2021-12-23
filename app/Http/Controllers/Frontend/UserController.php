@@ -17,5 +17,10 @@ class UserController extends Controller
         return view('user.websites.varification');
     }
 
+    public function caseformCreate()
+    {
+        return view('user.websites.complaintform-create');
+    }
+
 
 }

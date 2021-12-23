@@ -31,16 +31,13 @@ class LoginController extends Controller
                     return redirect()->route('admin')->with('message','Login successful.');
                 }
                 return redirect()->route('admin.login')->withErrors('Invalid user credentials');
-        
-            
-        
-        
-            // public function logout()
-            // {
-            //     Auth::logout();
-            //     return redirect()->route('admin.login')->with('message','Logging out.');
-            // }
+           
 
+    }
+    public function logout()
+    {
+        Auth::logout();
+        return redirect()->route('admin.login')->with('message','Logging out.');
     }
     
 

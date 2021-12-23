@@ -48,5 +48,23 @@ class PolicestationController extends Controller
         return redirect()->route('admin.stations');//back();
     }
 
+//code for the crud operation
+
+    public function policestationDetails($station_id)
+    {
+
+//        collection= get(), all()====== read with loop (foreach)
+//       object= first(), find(), findOrFail(),======direct
+      $policestation=policestation::find($station_id);
+//      $product=Product::where('id',$product_id)->first();
+        return view('admin.layouts.policestation-details',compact('policestation'));
+    }
+
+    public function policestationDelete($station_id)
+    {
+       policestation::find($station_id)->delete();
+       return redirect()->back()->with('success','Policestation is Deleted.');
+    }
+
 
 }
