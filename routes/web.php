@@ -64,7 +64,7 @@ Route::post('/login',[LoginController::class,'login'])->name('admin.do.login');
     })->name('admin');
 
 
-//sign out
+    //sign out
     Route::get('/logout',[LoginController::class,'logout'])->name('admin.logout');
     //end sign out
 
@@ -78,16 +78,23 @@ Route::post('/login',[LoginController::class,'login'])->name('admin.do.login');
     Route::get('/stations/edit/{id}',[PolicestationController::class,'policestationEdit'])->name('admin.station.edit');
     Route::put('/stations/update/{id}',[PolicestationController::class,'policestationUpdate'])->name('admin.station.update');
     
-    
-    
-    
     //end police station
+
+
     
     //complaint type
     Route::get('/complaint_types',[Complaint_typeController::class,'complaint_typeList'])->name('admin.complaint_types');
     Route::get('/complaint_types/create',[Complaint_typeController::class,'complaint_typeCreate'])->name('admin.complaint_types.create');
     Route::post('/complaint_types/store',[Complaint_typeController::class,'complaint_typeStore'])->name('admin.complaint_types.store');
+    Route::get('/complaint_types/view/{complainttype_id}',[Complaint_typeController::class,'complainttypeDetails'])->name('admin.complaint_types.details');
+    Route::get('/complaint_types/delete/{complainttype_id}',[Complaint_typeController::class,'complainttypeDelete'])->name('admin.complaint_types.delete');
+    Route::get('/complaint_types/edit/{id}',[Complaint_typeController::class,'complainttypeEdit'])->name('admin.complaint_types.edit');
+    Route::put('/complaint_types/update/{id}',[Complaint_typeController::class,'complainttypeUpdate'])->name('admin.complaint_types.update');
+    
+    
     //end complaint type
+
+
 
     //complainer list
     

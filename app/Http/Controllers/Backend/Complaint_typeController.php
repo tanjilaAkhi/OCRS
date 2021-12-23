@@ -48,6 +48,48 @@ class Complaint_typeController extends Controller
     }
     //end store info into the database
     
+
+    //code for the crud operation
+
+    public function complainttypeDetails($complainttype_id)
+    {
+
+//        collection= get(), all()====== read with loop (foreach)
+//       object= first(), find(), findOrFail(),======direct
+      $complainttype=complainttype::find($complainttype_id);
+//      $product=Product::where('id',$product_id)->first();
+        return view('admin.layouts.complaint_type-details',compact('complainttype'));
+    }
+
+    public function complainttypeDelete($complainttype_id)
+    {
+       complainttype::find($complainttype_id)->delete();
+       return redirect()->back()->with('success',' Desired Complaint is Deleted.');
+    }
+
+    public function complainttypeEdit($id){
+        // dd($id);
+        $complainttypes = complainttype::all();
+       $complainttype = complainttype::find($id);
+        if ($complainttype) {
+            return view('admin.layouts.update-complaint_type',compact('complainttype'));
+        }
+
+    }
+
+    public function complainttypeUpdate(Request $request,$id){
+        //dd($request->all());
+        $complainttype = complainttype::find($id);
+        if ($complainttype) {
+            $complainttype->update([
+                'casenumber'=>$request->casenumber,
+            'casetype'=>$request->casetype,
+            'casedetails'=>$request->casedetails,
+            ]);
+            return redirect()->route('admin.complaint_types');
+        }
+    }
+
    
 
 }

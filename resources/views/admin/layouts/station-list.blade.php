@@ -27,7 +27,7 @@
     @foreach($lists as $key=>$policestation) <!--data database theke table a show korer code (data retrive)--> 
     <tr>
         <th>{{$key+1}}</th>
-        <td>{{$policestation->dmp}}   {{$policestation->id}}</td>
+        <td>{{$policestation->dmp}} </td>     
         <td>{{$policestation->name}}</td>
         <td>{{$policestation->address}}</td>
         <td>{{$policestation->telephone}}</td>

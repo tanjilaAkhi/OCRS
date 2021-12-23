@@ -34,15 +34,15 @@ class ComplainttypeTableSeeder extends Seeder
 
         ]);
         complainttype::Create([
-            'casenumber'=>'',
-            'casetype'=>'',
-            'casedetails'=>''
+            'casenumber'=>'376',
+            'casetype'=>'Rape',
+            'casedetails'=>'Whoever commits rape shall be punished with 2[imprisonment] for life or with imprisonment of either description for a term which may extend to ten years, and shall also be liable to fine, unless the woman raped is his own wife and is not under twelve years of age, in which case he shall be punished with imprisonment of either description for a term which may extend to two years, or with fine, or with both.'
 
         ]);
         complainttype::Create([
-            'casenumber'=>'',
-            'casetype'=>'',
-            'casedetails'=>''
+            'casenumber'=>'363',
+            'casetype'=>'Kidnapping',
+            'casedetails'=>'Whoever kidnaps any person from Bangladesh or from lawful guardianship, shall be punished with imprisonment of either description for a term which may extend to seven years, and shall also be liable to fine.'
 
         ]);
 

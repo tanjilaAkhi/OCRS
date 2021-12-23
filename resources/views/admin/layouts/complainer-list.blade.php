@@ -18,15 +18,14 @@
         <th scope="col">Defendent Name</th>
         <th scope="col">Defendent Address</th>
         <th scope="col">Crime Place Photo</th>
-        <td ><a href="#" class="btn btn-success">View</a></td>
-        <td ><a href="#" class="btn btn-success">Edit</a></td>
-        <td ><a href="#" class="btn btn-success">Delete</a></td>
+     
         
     </tr>
     </thead>
     <tbody>
    <tr>
-
+        
+        
    </tr>
 
     </tbody>
