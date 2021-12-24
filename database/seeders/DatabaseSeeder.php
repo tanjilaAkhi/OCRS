@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
         $this->call([VerificationTableSeeder::class]);
-        $this->call([PolicestationTableSeeder::class]);
+        $this->call([PolicestationTableSeeder::class ]);
         $this->call([ComplainttypeTableSeeder::class]);
         $this->call([NidTableSeeder::class]);
     }

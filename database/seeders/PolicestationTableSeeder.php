@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-
+use App\Models\policestation;
 class PolicestationTableSeeder extends Seeder
 {
     /**
@@ -35,7 +35,7 @@ class PolicestationTableSeeder extends Seeder
 
         ]);
         policestation::Create([
-            'dmp'=>bcrypt('123456'),
+            'dmp'=>bcrypt('12367'),
             'name'=>'uttara',
             'address'=>'uttara sector-10',
             'telephone'=>'9365',
@@ -44,7 +44,7 @@ class PolicestationTableSeeder extends Seeder
 
         ]);
         policestation::Create([
-            'dmp'=>bcrypt('123456'),
+            'dmp'=>bcrypt('187456'),
             'name'=>'Banani',
             'address'=>'Banani',
             'telephone'=>'5664',

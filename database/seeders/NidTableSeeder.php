@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-
+use App\Models\Nid;
 class NidTableSeeder extends Seeder
 {
     /**
@@ -21,6 +21,7 @@ class NidTableSeeder extends Seeder
             'mname'=>'Bonna Ahmed',
             'cell'=>'0172',
             'email'=>'r@gmail.com',
+            'birthdate'=>'2000-10-20',
             'address'=>'Jamgora'
         ]);
 

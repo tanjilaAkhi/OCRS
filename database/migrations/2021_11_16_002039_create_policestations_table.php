@@ -15,7 +15,7 @@ class CreatePolicestationsTable extends Migration
     {
         Schema::create('policestations', function (Blueprint $table) {
             $table->id();
-            $table->double('dmp');
+            $table->string('dmp');
             $table->string('name');
             $table->string('address');
             $table->integer('telephone');

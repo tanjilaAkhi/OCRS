@@ -1,8 +1,9 @@
 
 <h1 style="color: White; text-align:center; " >Enter Your NID Number</h1>
     
-<form action="" method="POST">
-        @csrf
+
+       
+		
 <!-- css file -->
 <style>
 /*-----Background-----*/
@@ -58,26 +59,8 @@ body{
 #password{
  margin-top: 6px;
 }
-/*------------for phone Number--------*/
-      /*----------label--------*/
-.pno{
-	 font-size: 18px;
-     margin-left: -13px;
-     margin-top: 10px;
-     color: #ff9;
-	
-}	
 
-/*--------------for Gender---------------*/
-     /*--------------label---------*/
-.gender {
-	 color: white;
-     font-family: sans-serif;
-     font-size: 14px;
-     margin-left: 28px;
-     margin-top: 8px;
-	
-}
+
 
      
 /*------------For submit button---------*/
@@ -123,7 +106,8 @@ body{
      <header class="heading"> Verification-Form</header><hr></hr>
 	<!---Form starting----> 
 	<div class="row ">
-	 
+	<form action="{{route('user.do.verification')}}" method="post">
+	@csrf
 	 <!-----For Password and confirm password---->
           <div class="col-sm-12">
 		         <div class="row">
@@ -159,12 +143,13 @@ body{
 		  	 <!-- </div> -->
 		     <div class="col-sm-12">
 		         
-				 <button type="submit" class="btn btn-warning">Submit</button>
+				 <!-- <button type="submit" class="btn btn-warning">Submit</button> -->
+				 <a href="{{route('user.form.create')}}" class="btn btn-warning">Submit</a>
 		   </div>
 		 </div>
 	 </div>	 	 
 		 		 
-		 
+</form>	 
 </div>
 
 </body>		
@@ -172,6 +157,6 @@ body{
 	 
 	 
 
-</form>
+
 
 
