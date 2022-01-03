@@ -28,10 +28,10 @@ class UserController extends Controller
         $userFind = Nid::where('nid_no',$userInfo)->get();
         // dd($userFind->all());
         if (empty($userFind->all())) {
-            return redirect()->route('user.verification')->withErrors('Invalid user credentials');
+            return redirect()->route('user.verification')->with('success','Invalid user credentials');
         }
         else {
-            return redirect()->route('user.form.create')->with('message','verified successfully.');
+            return redirect()->route('user.form.create')->with('error','verified successfully.');
 
             
         }
@@ -40,44 +40,59 @@ class UserController extends Controller
            
 
     }
+    //form er code
 
     public function caseformCreate()
     {
         return view('user.websites.complaintform-create');
     }
+//end form er code
 
 
+    public function store(Request $request)
+    {
 
-    // public function store(Request $request)
-    // {
+
+        //validation
+        $request->validate([
+
+            'date'=>'required',
+            'time'=>'required',
+            'cname'=>'required',
+            'c_address'=>'required',
+            'cell'=>'required',
+            'email'=>'required|email',
+            'casetype'=>'required',
+            'details'=>'required',
+            'dname'=>'required',
+            'address'=>'required',
+
+        ]);
 
 
-    //     //validation
-    //     // $request->validate([
-
-    //     //     
+        Complaintform::create([
+            // field name from DB ||  field name from form
+            'date'=>$request->date,
+            'time'=>$request->time,
+            'cname'=>$request->cname,
+            'c_address'=>$request->c_address,
+            'cell'=>$request->cell,
+            'email'=>$request->email,
+            'casetype'=>$request->casetype,
+            'details'=>$request->details,
+            'dname'=>$request->dname,
+            'address'=>$request->address,
+            'photo'=>$request->photo,
             
+        ]);
+        return redirect()->route('user.form.confirmation');//back();
+    }
 
-    //     // ]);
 
-
-    //     Complaintform::create([
-    //         // field name from DB ||  field name from form
-    //         'date'=>$request->date,
-    //         'time'=>$request->time,
-    //         'cname'=>$request->cname,
-    //         'c_address'=>$request->c_address,
-    //         'cell'=>$request->cell,
-    //         'email'=>$request->email,
-    //         'casetype'=>$request->casetype,
-    //         'details'=>$request->details,
-    //         'dname'=>$request->dname,
-    //         'address'=>$request->address,
-    //         'photo'=>$request->photo,
-            
-    //     ]);
-    //     return redirect()->route('user.verification');//back();
-    // }
+    public function confirmation()
+    {
+        return view('user.websites.confirmation');
+    }
 
 
 }

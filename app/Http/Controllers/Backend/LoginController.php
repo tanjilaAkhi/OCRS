@@ -30,7 +30,7 @@ class LoginController extends Controller
                    
                     return redirect()->route('admin')->with('message','Login successful.');
                 }
-                return redirect()->route('admin.login')->withErrors('Invalid user credentials');
+                return redirect()->route('admin.login')->with('sms','Invalid user credentials');
            
 
     }

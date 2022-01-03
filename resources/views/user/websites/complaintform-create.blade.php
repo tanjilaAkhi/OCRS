@@ -147,7 +147,7 @@ button{
             </select> 
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Enter Complaint Description</label>
-            <input name="details" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" require>
+            <textarea name="details" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" require></textarea>
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Enter Defendant Name</label>
@@ -164,7 +164,7 @@ button{
 </br>
 </br>
 
-    <button type="submit" class="btn btn-success" >Submit <i class="glyphicon glyphicon-send"></i></button>
+    <button type="submit" class="btn btn-success"  >Submit</button>
   </form>
   </div>
 </div>

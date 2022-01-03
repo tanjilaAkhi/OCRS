@@ -105,6 +105,27 @@ body{
  <!---heading---->
      <header class="heading"> Verification-Form</header><hr></hr>
 	<!---Form starting----> 
+
+@if(session('success'))
+<div class="alert alert-success">
+	{!! session('success')!!}
+</div>
+@endif
+
+
+@if(session('error'))
+<div class="alert alert-danger">
+	{!! session('error')!!}
+</div>
+@endif
+
+
+
+
+
+
+
+
 	<div class="row ">
 	<form action="{{route('user.do.verification')}}" method="post">
 	@csrf

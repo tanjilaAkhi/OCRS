@@ -15,9 +15,11 @@
         <th scope="col">Complainer Phone</th>
         <th scope="col">Complainer Email</th>
         <th scope="col">Complaint Type</th>
+        <th scope="col">Complaint Details</th>
         <th scope="col">Defendent Name</th>
         <th scope="col">Defendent Address</th>
         <th scope="col">Crime Place Photo</th>
+        <th scope="col">Action</th>
      
         
     </tr>

@@ -27,8 +27,25 @@
   margin-top: -85px;
 }
     </style>
+
+  <!-- confirmation with sms   -->
+    @if(session('message'))
+<div class="alert alert-success">
+	{!! session('message')!!}
+</div>
+@endif
+
+
+@if(session('sms'))
+<div class="alert alert-danger">
+	{!! session('sms')!!}
+</div>
+@endif
+
+<!-- end confirmation with sms   -->
     
-    <div id="login">
+
+<div id="login">
     <h3 class="text-center text-white pt-5">WELCOME TO ONLINE CRIME REPORTING SYSTEM</h3>
         <h3 class="text-center text-white pt-5">Login form</h3>
         <div class="container">

@@ -40,7 +40,7 @@ Route::get('/verification',[UserController::class,'verification'])->name('user.v
 Route::post('/verified',[UserController::class,'verified'])->name('user.do.verification');
 Route::get('/form/create',[UserController::class,'caseformCreate'])->name('user.form.create');// form create korer jonno
 Route::post('/form/store',[UserController::class,'store'])->name('user.form.store');//database a data submit korer  jonno
-
+Route::get('/form/confirmation',[UserController::class,'confirmation'])->name('user.form.confirmation');
 //end NID + case filed 
 
 
