@@ -16,7 +16,7 @@ class PolicestationTableSeeder extends Seeder
         //admin verification seeder
         
         policestation::Create([
-            'dmp'=>bcrypt('123456'),
+            'dmp'=>'123456',
             'name'=>'Ashulia',
             'address'=>'Ashulia Bazar',
             'telephone'=>'9654',
@@ -26,7 +26,7 @@ class PolicestationTableSeeder extends Seeder
         ]);
 
         policestation::Create([
-            'dmp'=>bcrypt('123451'),
+            'dmp'=>'123451',
             'name'=>'Savar Thana',
             'address'=>'Savar',
             'telephone'=>'8965',
@@ -35,7 +35,7 @@ class PolicestationTableSeeder extends Seeder
 
         ]);
         policestation::Create([
-            'dmp'=>bcrypt('12367'),
+            'dmp'=>'12367',
             'name'=>'uttara',
             'address'=>'uttara sector-10',
             'telephone'=>'9365',
@@ -44,7 +44,7 @@ class PolicestationTableSeeder extends Seeder
 
         ]);
         policestation::Create([
-            'dmp'=>bcrypt('187456'),
+            'dmp'=>'187456',
             'name'=>'Banani',
             'address'=>'Banani',
             'telephone'=>'5664',
@@ -53,7 +53,7 @@ class PolicestationTableSeeder extends Seeder
 
         ]);
         policestation::Create([
-            'dmp'=>bcrypt('122256'),
+            'dmp'=>'122256',
             'name'=>'Gulshan',
             'address'=>'Gulshan',
             'telephone'=>'9666',

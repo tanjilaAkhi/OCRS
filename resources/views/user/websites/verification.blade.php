@@ -120,7 +120,9 @@ body{
 							</div>
 						
 				  <div class="col-xs-8">
-			             <input name="password" type="password"  placeholder="Enter your nid number" class="form-control" require>
+			             <!-- <input name="password" type="password"  placeholder="Enter your nid number" class="form-control" require> -->
+			             <input name="password" type="number"  placeholder="Enter your nid number" class="form-control" require>
+
 				 </div>
           </div>
 		  </div>
@@ -143,8 +145,8 @@ body{
 		  	 <!-- </div> -->
 		     <div class="col-sm-12">
 		         
-				 <!-- <button type="submit" class="btn btn-warning">Submit</button> -->
-				 <a href="{{route('user.form.create')}}" class="btn btn-warning">Submit</a>
+				 <button type="submit" class="btn btn-warning" > Submit</button>
+				 <!-- <a href="{{route('user.form.create')}}" class="btn btn-warning">Submit</a> -->
 		   </div>
 		 </div>
 	 </div>	 	 

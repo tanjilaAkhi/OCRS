@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateNidsTable extends Migration
+class CreateComplaintformsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,19 @@ class CreateNidsTable extends Migration
      */
     public function up()
     {
-        Schema::create('nids', function (Blueprint $table) {
+        Schema::create('complaintforms', function (Blueprint $table) {
             $table->id();
-            $table->string('nid_no');
-            $table->string('name');
-            $table->string('fname');
-            $table->string('mname');
-            $table->double('cell');
+            $table->date('date');
+            $table->string('time');
+            $table->string('cname');
+            $table->string('c_address');
+            $table->integer('cell');
             $table->string('email');
-            $table->string('birthdate');
+            $table->string('casetype');
+            $table->string('details');
+            $table->string('dname');
             $table->string('address');
+            $table->string('photo');
             $table->timestamps();
         });
     }
@@ -34,6 +37,6 @@ class CreateNidsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('nids');
+        Schema::dropIfExists('complaintforms');
     }
 }

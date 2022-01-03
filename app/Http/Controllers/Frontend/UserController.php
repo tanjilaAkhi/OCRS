@@ -4,7 +4,8 @@ namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
-
+use App\Models\Complaintform;
+use App\Models\Nid;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
@@ -23,17 +24,19 @@ class UserController extends Controller
     {
         // dd($request->all());
         $userInfo=$request->except('_token');
-        //        $credentials['email']=$request->user_email;
-        //        $credentials['password']=$request->user_password;
-        //        dd($credentials);
-        //        $credentials=$request->only('user_email','user_password');
-        
-        
-                if(Auth::attempt($userInfo)){
-                   
-                    return redirect()->route('user.form.create')->with('message','verified successfully.');
-                }
-             return redirect()->route('user.verification')->withErrors('Invalid user credentials');
+        // dd($userInfo);
+        $userFind = Nid::where('nid_no',$userInfo)->get();
+        // dd($userFind->all());
+        if (empty($userFind->all())) {
+            return redirect()->route('user.verification')->withErrors('Invalid user credentials');
+        }
+        else {
+            return redirect()->route('user.form.create')->with('message','verified successfully.');
+
+            
+        }
+                
+             
            
 
     }
@@ -45,36 +48,36 @@ class UserController extends Controller
 
 
 
-    public function complaint_typeStore(Request $request)
-    {
+    // public function store(Request $request)
+    // {
 
 
-        //validation
-        // $request->validate([
+    //     //validation
+    //     // $request->validate([
 
-        //     'casenumber'=>'required',
-        //     'casetype'=>'required',
-        //     'casedetails'=>'required',
+    //     //     
             
 
-        // ]);
+    //     // ]);
 
 
-        complainttype::create([
-            // field name from DB ||  field name from form
-            'casenumber'=>$request->casenumber,
-            'casetype'=>$request->casetype,
-            'casedetails'=>$request->casedetails,
-            'casenumber'=>$request->casenumber,
-            'casetype'=>$request->casetype,
-            'casedetails'=>$request->casedetails,
-            'casenumber'=>$request->casenumber,
-            'casetype'=>$request->casetype,
-            'casedetails'=>$request->casedetails,
+    //     Complaintform::create([
+    //         // field name from DB ||  field name from form
+    //         'date'=>$request->date,
+    //         'time'=>$request->time,
+    //         'cname'=>$request->cname,
+    //         'c_address'=>$request->c_address,
+    //         'cell'=>$request->cell,
+    //         'email'=>$request->email,
+    //         'casetype'=>$request->casetype,
+    //         'details'=>$request->details,
+    //         'dname'=>$request->dname,
+    //         'address'=>$request->address,
+    //         'photo'=>$request->photo,
             
-        ]);
-        return redirect()->route('user.verification');//back();
-    }
+    //     ]);
+    //     return redirect()->route('user.verification');//back();
+    // }
 
 
 }

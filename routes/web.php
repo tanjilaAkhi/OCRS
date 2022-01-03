@@ -39,7 +39,7 @@ Route::get('/emergencycontact',[ContactController::class,'emergencycontact'])->n
 Route::get('/verification',[UserController::class,'verification'])->name('user.verification');
 Route::post('/verified',[UserController::class,'verified'])->name('user.do.verification');
 Route::get('/form/create',[UserController::class,'caseformCreate'])->name('user.form.create');// form create korer jonno
-//Route::post('/form/store',[UserController::class,'store'])->name('admin.form.store');//database a data submit korer  jonno
+Route::post('/form/store',[UserController::class,'store'])->name('user.form.store');//database a data submit korer  jonno
 
 //end NID + case filed 
 

@@ -40,7 +40,7 @@
 
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Enter Birth Date</label>
-            <input name="birthdate" type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" require>
+            <input name="birthdate" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" require>
         </div>
 
         <div class="mb-3">
