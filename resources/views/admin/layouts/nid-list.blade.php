@@ -32,11 +32,11 @@
         <td>{{$Nid->mname}}</td>
         <td>{{$Nid->cell}}</td>
         <td>{{$Nid->email}}</td>
-        <td>{{$Nid->birthday}}</td>
+        <td>{{$Nid->birthdate}}</td>
         <td>{{$Nid->address}}</td>
-        <td ><a href="#" class="btn btn-success">View</a></td>
-        <td ><a href="#" class="btn btn-success">Edit</a></td>
-        <td ><a href="#" class="btn btn-success">Delete</a></td>
+        <td ><a  class="btn btn-success" href="{{route('admin.nid.details',$Nid->id)}}">View</a></td>
+        <td ><a  class="btn btn-success"  href="{{route('admin.nid.edit',$Nid->id)}}" >Edit</a></td>
+        <td ><a  class="btn btn-success" href="{{route('admin.nid.delete',$Nid->id)}}">Delete</a></td>
        
         
     </tr>

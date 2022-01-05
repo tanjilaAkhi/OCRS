@@ -56,6 +56,50 @@ class NidController extends Controller
         return redirect()->route('admin.nids');//back();
     }
 
+    public function nidDetails($Nid_id)
+    {
+     
+//        collection= get(), all()====== read with loop (foreach)
+//       object= first(), find(), findOrFail(),======direct
+      $Nids=Nid::find($Nid_id);
+//      $product=Product::where('id',$product_id)->first();
+        return view('admin.layouts.nid-details',compact('Nids'));
+    }
+
+    public function nidDelete($Nid_id)
+    {
+    Nid::find($Nid_id)->delete();
+       return redirect()->back()->with('success','Nid is Deleted.');
+    }
+
+    public function nidEdit($id){
+        // dd($id);
+        $Nids = Nid::all();
+       $Nid = Nid::find($id);
+        if ($Nid) {
+            return view('admin.layouts.update-nid',compact('Nid'));
+        }
+
+    }
+
+    public function nidUpdate(Request $request,$id){
+        //dd($request->all());
+        $Nid = Nid::find($id);
+        if ($Nid) {
+            $Nid->update([
+                'nid_no'=>$request->nid_no,
+            'name'=>$request->name,
+            'fname'=>$request->fname,
+            'mname'=>$request->mname,
+            'cell'=>$request->cell,
+            'email'=>$request->email,
+            'birthdate'=>$request->birthdate,
+            'address'=>$request->address,
+            ]);
+            return redirect()->route('admin.nids');
+        }
+    }
+
 
     
 

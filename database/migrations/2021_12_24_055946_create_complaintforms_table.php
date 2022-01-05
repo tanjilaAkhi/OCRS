@@ -26,6 +26,8 @@ class CreateComplaintformsTable extends Migration
             $table->string('dname');
             $table->string('address');
             $table->string('photo');
+            $table->string('policestation');
+            $table->string('issued_at');
             $table->timestamps();
         });
     }

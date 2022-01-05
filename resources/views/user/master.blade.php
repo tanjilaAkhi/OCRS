@@ -300,7 +300,7 @@ div#w4pl-inner-8886 li {
                                 <p class="step" style="color:#FFF!important;"><i class="fa fa-hand-o-right" style="color:#FFF!important;"></i> First Step </p>
                             </div>
                             <div class="col-lg-12">
-                                <p><i class="fa fa-snowflake-o"></i>Submit your national identity card number and mobile number  </p>
+                                <p><i class="fa fa-snowflake-o"></i>Submit your national identity card number to verify your identity  </p>
                                 
                             </div>
                             <br />

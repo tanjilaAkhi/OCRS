@@ -95,7 +95,12 @@ button{
   <form action="{{route('user.form.store')}}" class="col-xs-12 col-sm-12 col-md-12" method="POST">
   @csrf
   <h2 style=" text-align:center; " >Please fill all mandatory fields</h2>
-  <div class="mb-3">
+
+
+  
+  
+  
+    <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label"> Enter Issue Date</label>
             <input name="date" type="date" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" require>
 
@@ -161,6 +166,25 @@ button{
             <label for="exampleInputEmail1" class="form-label">Enter Crime place Photo</label>
             <input name="photo" type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
         </div>
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Enter Police Station</label>
+            <select name="policestation" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" require>
+            <option> </option>
+            <option>General Dairy(GD)</option>
+           
+    <optgroup label="Criminal Case(select any on them)">
+            <option>Ashulia</option>
+            <option>Savar</option>
+            <option>Turag</option>        
+            <option>Banani</option>
+            <option>Dhanmondi</option>
+            
+    </optgroup>
+            </select> 
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Enter Issused At</label>
+            <input name="issued_at" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+        </div>
 </br>
 </br>
 
@@ -168,6 +192,7 @@ button{
   </form>
   </div>
 </div>
+
 
 
 

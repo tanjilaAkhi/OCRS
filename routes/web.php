@@ -41,6 +41,7 @@ Route::post('/verified',[UserController::class,'verified'])->name('user.do.verif
 Route::get('/form/create',[UserController::class,'caseformCreate'])->name('user.form.create');// form create korer jonno
 Route::post('/form/store',[UserController::class,'store'])->name('user.form.store');//database a data submit korer  jonno
 Route::get('/form/confirmation',[UserController::class,'confirmation'])->name('user.form.confirmation');
+Route::get('/form/view/{info_id}',[UserController::class,'complainerdetails'])->name('admin.complainer.details');
 //end NID + case filed 
 
 
@@ -107,7 +108,10 @@ Route::post('/login',[LoginController::class,'login'])->name('admin.do.login');
     Route::get('/nids',[NidController::class,'nidList'])->name('admin.nids');//list show koranor jonno
     Route::get('/nids/create',[NidController::class,'nidCreate'])->name('admin.nids.create');// form create korer jonno
     Route::post('/nids/store',[NidController::class,'store'])->name('admin.nids.store');//database a data submit korer  jonno
-  
+    Route::get('/nids/view/{$Nid_id}',[NidController::class,'nidDetails'])->name('admin.nid.details');
+     Route::get('/nids/delete/{Nid_id}',[NidController::class,'nidDelete'])->name('admin.nid.delete');
+    Route::get('/nids/edit/{id}',[NidController::class,'nidEdit'])->name('admin.nid.edit');
+    Route::put('/nids/update/{id}',[NidController::class,'nidUpdate'])->name('admin.nid.update');
     //End NID information Code
     
 });//end admin panel

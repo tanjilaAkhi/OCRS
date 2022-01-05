@@ -66,6 +66,10 @@ class UserController extends Controller
             'details'=>'required',
             'dname'=>'required',
             'address'=>'required',
+            // 'photo'=> null,
+            'policestation'=>'required',
+            'issued_at'=>'required',
+            
 
         ]);
 
@@ -83,6 +87,8 @@ class UserController extends Controller
             'dname'=>$request->dname,
             'address'=>$request->address,
             'photo'=>$request->photo,
+            'policestation'=>$request->policestation,
+            'issued_at'=>$request->issued_at,
             
         ]);
         return redirect()->route('user.form.confirmation');//back();
@@ -92,6 +98,17 @@ class UserController extends Controller
     public function confirmation()
     {
         return view('user.websites.confirmation');
+    }
+
+
+    public function complainerdetails($information_id)
+    {
+
+//        collection= get(), all()====== read with loop (foreach)
+//       object= first(), find(), findOrFail(),======direct
+      $information=complaintform::find($information_id);
+//      $product=Product::where('id',$product_id)->first();
+        return view('admin.websites.complainerdetails',compact('information'));
     }
 
 
