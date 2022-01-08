@@ -58,13 +58,15 @@ class NidController extends Controller
 
     public function nidDetails($Nid_id)
     {
+        // dd($request->$Nid_id);
      
 //        collection= get(), all()====== read with loop (foreach)
 //       object= first(), find(), findOrFail(),======direct
-      $Nids=Nid::find($Nid_id);
+      $Nid=Nid::find($Nid_id);
 //      $product=Product::where('id',$product_id)->first();
-        return view('admin.layouts.nid-details',compact('Nids'));
-    }
+        
+        return view('admin.layouts.nid-details',compact('Nid'));
+}
 
     public function nidDelete($Nid_id)
     {

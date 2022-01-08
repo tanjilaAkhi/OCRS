@@ -5,6 +5,7 @@ use App\Http\Controllers\Backend\Complaint_typeController;
 use App\Http\Controllers\Backend\ComplainerController;
 use App\Http\Controllers\Backend\NidController;
 use App\Http\Controllers\Backend\LoginController;
+use App\Http\Controllers\Backend\SurveyController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontend\UserController;
 use App\Http\Controllers\Frontend\ContactController;
@@ -103,13 +104,19 @@ Route::post('/login',[LoginController::class,'login'])->name('admin.do.login');
     Route::get('/complainers',[ComplainerController::class,'complainerList'])->name('admin.complainers');
     //end complainer list
 
+
+    //complainer list
+    
+    Route::get('/surveys',[SurveyController::class,'surveyList'])->name('admin.surveys');
+    //end complainer list
+
     //NID information Code
    
     Route::get('/nids',[NidController::class,'nidList'])->name('admin.nids');//list show koranor jonno
     Route::get('/nids/create',[NidController::class,'nidCreate'])->name('admin.nids.create');// form create korer jonno
     Route::post('/nids/store',[NidController::class,'store'])->name('admin.nids.store');//database a data submit korer  jonno
     Route::get('/nids/view/{$Nid_id}',[NidController::class,'nidDetails'])->name('admin.nid.details');
-     Route::get('/nids/delete/{Nid_id}',[NidController::class,'nidDelete'])->name('admin.nid.delete');
+    Route::get('/nids/delete/{Nid_id}',[NidController::class,'nidDelete'])->name('admin.nid.delete');
     Route::get('/nids/edit/{id}',[NidController::class,'nidEdit'])->name('admin.nid.edit');
     Route::put('/nids/update/{id}',[NidController::class,'nidUpdate'])->name('admin.nid.update');
     //End NID information Code

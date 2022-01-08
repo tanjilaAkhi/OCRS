@@ -101,14 +101,14 @@ class UserController extends Controller
     }
 
 
-    public function complainerdetails($information_id)
+    public function complainerdetails($info_id)
     {
 
 //        collection= get(), all()====== read with loop (foreach)
 //       object= first(), find(), findOrFail(),======direct
-      $information=complaintform::find($information_id);
+      $info=complaintform::find($info_id);
 //      $product=Product::where('id',$product_id)->first();
-        return view('admin.websites.complainerdetails',compact('information'));
+        return view('admin.websites.complainerdetails',compact('info'));
     }
 
 
