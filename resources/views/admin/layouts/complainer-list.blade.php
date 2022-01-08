@@ -33,7 +33,6 @@
         <th>{{$key+1}}</th>
         <td>{{$list->date}}</td>
         <td>{{$list->time}}</td>
-        <td>{{$list->date}}</td>
         <td>{{$list->cname}}</td>
         <td>{{$list->c_address}}</td>
         <td>{{$list->cell}}</td>
@@ -45,9 +44,8 @@
         <td>{{$list->photo}}</td>
         <td>{{$list->policestation}}</td>
         <td>{{$list->issued_at}}</td>
-        <td ><a  class="btn btn-success" href="">View</a></td>
-        <td ><a  class="btn btn-success"  href="" >Edit</a></td>
-        <td ><a  class="btn btn-success" href="">Delete</a></td>
+        <td ><a  class="btn btn-success" href="{{route('admin.complainer.details', $list->id)}}">View</a></td>
+        <td ><a  class="btn btn-success" href="{{route('admin.complainer.delete', $list->id)}}">Delete</a></td>
        
         
     </tr>
