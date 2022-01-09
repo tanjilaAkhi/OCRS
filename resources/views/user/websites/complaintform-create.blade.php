@@ -92,7 +92,7 @@ button{
 <div class="container">
   <div class="row">
   
-  <form action="{{route('user.form.store')}}" class="col-xs-12 col-sm-12 col-md-12" method="POST">
+  <form action="{{route('user.form.store')}}" class="col-xs-12 col-sm-12 col-md-12" enctype="multipart/form-data" method="POST">
   @csrf
   <h2 style=" text-align:center; " >Please fill all mandatory fields</h2>
 
@@ -164,7 +164,7 @@ button{
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Enter Crime place Photo</label>
-            <input name="photo" type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
+            <input type="file" name="image"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Enter Police Station</label>

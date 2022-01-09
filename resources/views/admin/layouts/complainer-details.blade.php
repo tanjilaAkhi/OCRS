@@ -15,7 +15,7 @@
 <p>Complaint Details: {{$list->details}}</p>
 <p>Defendant Name: {{$list->dname}}</p>
 <p>Defendant Address: {{$list->address}}</p>
-<p>Crime Place Photo: {{$list->photo}}</p>
+<p>Crime Place Photo: {{$list->image}}</p>
 <p>Police Station Name: {{$list->policestation}}</p>
 <p>Issused at: {{$list->issued_at}}</p>
 

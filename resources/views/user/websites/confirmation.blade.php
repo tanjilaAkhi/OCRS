@@ -33,14 +33,13 @@
     <i class="fa-fw fa-linkedin fab" style="font-size: 24px;"></i></a><a href="" target="_blank" class="sp-sp sp-whitespace-no-wrap sp-sp-pinterest sp-sp-md" style="width: 39px; height: 39px; color: rgb(255, 255, 255); margin: 0px 10px 0px 0px; border-radius: 99px;" rel="noopener"><i class="fa-fw fa-pinterest fab" style="font-size: 24px;"></i></a>
     <a href="" target="_blank" class="sp-sp sp-whitespace-no-wrap sp-sp-twitter sp-sp-md" style="width: 39px; height: 39px; color: rgb(255, 255, 255); border-radius: 99px;" rel="noopener"><i class="fa-fw fa-twitter fab" style="font-size: 24px;"></i></a></div></div>
     <div class="gutter gutter-horizontal" style="width: 6px;"></div><div id="sp-c7eh90" class="sp-el-col sp-p-4  sp-w-full" style="width: calc(50% - 20px); padding: 50px 55px; background-color: rgb(255, 255, 255);"><h1 id="sp-l2vios" class="sp-css-target" style="font-size: 25px; text-align: center; padding: 10px; margin-top: 0px;">Please Download your PDF Copy</h1>
-    <div id="sp-hga93n" class="sp-spacer" style="height: 20px;"></div><div class="sp-button-wrapper" style="padding: 10px; margin-top: 0px; text-align: center;"><a href="{{route('admin.complainer.details',$info->id)}}" id="sp-x7j45v" target=""  rel="noopener" class="sp-button sp-css-target sp-text-center sp-inline-block sp-leading-none" style="font-size: 22px; background: rgb(0, 184, 129); color: rgb(255, 255, 255); width: auto; padding: 12px 20px; border-radius: 5px;"><span>Download PDF</span></a></div></div></div></section></div>
+    <div id="sp-hga93n" class="sp-spacer" style="height: 20px;"></div><div class="sp-button-wrapper" style="padding: 10px; margin-top: 0px; text-align: center;"><a href="{{route('admin.complainer.table')}}" id="sp-x7j45v" target=""  rel="noopener" class="sp-button sp-css-target sp-text-center sp-inline-block sp-leading-none" style="font-size: 22px; background: rgb(0, 184, 129); color: rgb(255, 255, 255); width: auto; padding: 12px 20px; border-radius: 5px;"><span>Download PDF</span></a></div></div></div></section></div>
 
 
     <div class="tv">
 <div class="screen mute" id="tv"></div>
 </div>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/v652eace1692a40cfa3763df669d7439c1639079717194" integrity="sha512-Gi7xpJR8tSkrpF7aordPZQlW2DLtzUlZcumS8dMQjwDHEnw9I7ZLyiOj/6tZStRBGtGgN6ceN6cMH8z7etPGlw==" data-cf-beacon='{"rayId":"6c7a39386c463368","token":"03b65fdd9bdd49c7a08888ca7c0a1b7e","version":"2021.12.0","si":100}' crossorigin="anonymous"></script>
-
 
 
 

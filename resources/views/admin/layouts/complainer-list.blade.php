@@ -41,7 +41,10 @@
         <td>{{$list->details}}</td>
         <td>{{$list->dname}}</td>
         <td>{{$list->address}}</td>
-        <td>{{$list->photo}}</td>
+        <td>
+            <img src="{{url('/uploads/'.$list->image)}}" width="100px" alt="image">
+        </td>
+
         <td>{{$list->policestation}}</td>
         <td>{{$list->issued_at}}</td>
         <td ><a  class="btn btn-success" href="{{route('admin.complainer.details', $list->id)}}">View</a></td>

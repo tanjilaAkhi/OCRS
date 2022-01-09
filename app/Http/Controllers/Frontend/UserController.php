@@ -53,6 +53,21 @@ class UserController extends Controller
     {
 
 
+        //picture uploading
+        $image_name=null;
+        //              step 1: check image exist in this request.
+                         if($request->hasFile('image'))
+                         {
+                             // step 2: generate file name
+                             $image_name=date('Ymdhis') .'.'. $request->file('image')->getClientOriginalExtension();
+        
+                             //step 3 : store into project directory
+        
+                             $request->file('image')->storeAs('/uploads',$image_name);
+        
+                         }
+        //end picture uploading
+
         //validation
         $request->validate([
 
@@ -66,7 +81,6 @@ class UserController extends Controller
             'details'=>'required',
             'dname'=>'required',
             'address'=>'required',
-            // 'photo'=> null,
             'policestation'=>'required',
             'issued_at'=>'required',
             
@@ -86,7 +100,7 @@ class UserController extends Controller
             'details'=>$request->details,
             'dname'=>$request->dname,
             'address'=>$request->address,
-            'photo'=>$request->photo,
+            'image'=>$image_name,
             'policestation'=>$request->policestation,
             'issued_at'=>$request->issued_at,
             
@@ -101,15 +115,10 @@ class UserController extends Controller
     }
 
 
-    public function complainerdetails($info_id)
+    public function complainertable()
     {
-
-//        collection= get(), all()====== read with loop (foreach)
-//       object= first(), find(), findOrFail(),======direct
-      $info=complaintform::find($info_id);
-//      $product=Product::where('id',$product_id)->first();
-        return view('admin.websites.complainerdetails',compact('info'));
+    
+return view('user.websites.formtable');
     }
-
-
+    
 }
