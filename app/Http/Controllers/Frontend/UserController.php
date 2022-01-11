@@ -117,8 +117,8 @@ class UserController extends Controller
 
     public function complainertable()
     {
-    
-return view('user.websites.formtable');
+        $informations = complaintform::all();
+       return view('user.websites.formtable',compact('informations'));
     }
     
 }

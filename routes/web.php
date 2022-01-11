@@ -21,12 +21,27 @@ use App\Http\Controllers\Frontend\ContactController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-//Route::group(['prefix'=>'user-portal'],function(){
 
-    Route::get('/', function () {
-        return view('user.master');
+
+
+
+
+    // Route::group(['prefix'=>'user-portal'],function(){
+    // Route::group(['middleware'=>'auth'],function (){ //middleware applied in the whole section to prevent the unauthorized access
+        // Route::get('/', function () {
+        //     return view('admin.master');
+        // })->name('admin');
+
+
+
+
+        Route::get('/', function () {
+                return view('user.master');
+        
+
+
     });//->name ('user');
-
+    //
 
 //Contact
 Route::get('/contact',[ContactController::class,'contact'])->name('user.contact');
@@ -37,6 +52,7 @@ Route::get('/emergencycontact',[ContactController::class,'emergencycontact'])->n
 //end emergency contact
 
 //NID verification
+
 Route::get('/verification',[UserController::class,'verification'])->name('user.verification');
 Route::post('/verified',[UserController::class,'verified'])->name('user.do.verification');
 Route::get('/form/create',[UserController::class,'caseformCreate'])->name('user.form.create');// form create korer jonno
@@ -46,9 +62,10 @@ Route::get('/form/table',[UserController::class,'complainertable'])->name('admin
 //end NID + case filed 
 
 
-//end user panel related
-//});
 
+
+// });
+//end user panel related
 
 //admin panel related
 
