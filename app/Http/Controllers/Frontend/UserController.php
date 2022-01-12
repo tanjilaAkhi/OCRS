@@ -75,7 +75,7 @@ class UserController extends Controller
             'time'=>'required',
             'cname'=>'required',
             'c_address'=>'required',
-            'cell'=>'required',
+            'cell'=>'required|min:11',
             'email'=>'required|email',
             'casetype'=>'required',
             'details'=>'required',
@@ -83,6 +83,9 @@ class UserController extends Controller
             'address'=>'required',
             'policestation'=>'required',
             'issued_at'=>'required',
+            'officername'=>'required',
+            'officeremail'=>'required|email',
+            'officerphone'=>'required|min:11',
             
 
         ]);
@@ -103,6 +106,9 @@ class UserController extends Controller
             'image'=>$image_name,
             'policestation'=>$request->policestation,
             'issued_at'=>$request->issued_at,
+            'officername'=>$request->officername,
+            'officeremail'=>$request->officeremail,
+            'officerphone'=>$request->officerphone,
             
         ]);
         return redirect()->route('user.form.confirmation');//back();
@@ -117,8 +123,10 @@ class UserController extends Controller
 
     public function complainertable()
     {
-        $informations = complaintform::all();
-       return view('user.websites.formtable',compact('informations'));
+        $informations = complaintform::table('complainer')->latest('id')->first();
+       return view('user.websites.pdftable');
     }
     
 }
+
+ 

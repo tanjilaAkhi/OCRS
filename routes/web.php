@@ -32,40 +32,42 @@ use App\Http\Controllers\Frontend\ContactController;
         //     return view('admin.master');
         // })->name('admin');
 
-
-
-
+Route::group(['prefix'=>'user'],function(){
         Route::get('/', function () {
-                return view('user.master');
-        
+            return view('user.master');
+
 
 
     });//->name ('user');
     //
 
-//Contact
-Route::get('/contact',[ContactController::class,'contact'])->name('user.contact');
-//end Contact
+    //Contact
+    Route::get('/contact',[ContactController::class,'contact'])->name('user.contact');
+    //end Contact
 
-//Emergency contact
-Route::get('/emergencycontact',[ContactController::class,'emergencycontact'])->name('user.emergencycontact');
-//end emergency contact
+    //Emergency contact
+    Route::get('/emergencycontact',[ContactController::class,'emergencycontact'])->name('user.emergencycontact');
+    //end emergency contact
 
-//NID verification
+    //NID verification
 
-Route::get('/verification',[UserController::class,'verification'])->name('user.verification');
-Route::post('/verified',[UserController::class,'verified'])->name('user.do.verification');
-Route::get('/form/create',[UserController::class,'caseformCreate'])->name('user.form.create');// form create korer jonno
-Route::post('/form/store',[UserController::class,'store'])->name('user.form.store');//database a data submit korer  jonno
-Route::get('/form/confirmation',[UserController::class,'confirmation'])->name('user.form.confirmation');
-Route::get('/form/table',[UserController::class,'complainertable'])->name('admin.complainer.table');
-//end NID + case filed 
+    Route::get('/verification',[UserController::class,'verification'])->name('user.verification');
+    Route::post('/verified',[UserController::class,'verified'])->name('user.do.verification');
+    Route::get('/form/create',[UserController::class,'caseformCreate'])->name('user.form.create');// form create korer jonno
+    Route::post('/form/store',[UserController::class,'store'])->name('user.form.store');//database a data submit korer  jonno
+    Route::get('/form/confirmation',[UserController::class,'confirmation'])->name('user.form.confirmation');
+    Route::get('/form/table',[UserController::class,'complainertable'])->name('admin.complainer.table');
+    //end NID + case filed 
 
 
 
 
 // });
 //end user panel related
+});
+
+
+       
 
 //admin panel related
 

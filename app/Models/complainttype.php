@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class complainttype extends Model
 {
     use HasFactory;
-    protected $fillable=['casenumber','casetype','casedetails'];
+    protected $guarded=[];
 }

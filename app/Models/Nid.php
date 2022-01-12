@@ -9,5 +9,5 @@ class Nid extends Model
 {
     use HasFactory;
     
-    protected $fillable=['nid_no','name','fname','mname','cell','email' ,'birthdate','address'];
+    protected $guarded=[];
 }

@@ -52,7 +52,7 @@ background-color: RoyalBlue;
 <body>
 <div id="divToPrint">
 <h1 style="text-align:center;">GOVERNMENT OF THE PEOPLES REPUBLIC OF BANGLADESH</h1>
-    <h3 style="text-align:center;">COMPLAINER FORM WITH DETAILS</h3>
+    <h3 style="text-align:center;">COMPLAINER SUBMITTED INFORMATION COPY </h3>
 
 
     <br>
@@ -83,8 +83,7 @@ background-color: RoyalBlue;
     <tbody>
    
     
-    @foreach($informations as $key=>$information) 
-    <!--data database theke table a show korer code (data retrive)--> 
+    @foreach($informations as $key=>$information) <!--data database theke table a show korer code (data retrive)--> 
     <tr>
         <!-- <th>{{$key+1}}</th> -->
         <td>{{$information->date}} </td>     
@@ -117,12 +116,6 @@ background-color: RoyalBlue;
 
 
     
-
-
-
-
-
-
 
 
 

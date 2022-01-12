@@ -185,6 +185,148 @@ button{
             <label for="exampleInputEmail1" class="form-label">Enter Issused At</label>
             <input name="issued_at" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" >
         </div>
+
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Enter Officer Name</label>
+            <select name="officername" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" require>
+            <option> </option>
+            <option>Ashulia</option>
+           
+    <optgroup label="Officer Name under Ashulia Thana(select any on them)">
+            <option>Ashulia</option>
+            <option>Savar</option>
+            
+            
+    </optgroup>
+    <option>Savar</option>
+           
+           <optgroup label="Officer Name under Savar Thana(select any on them)">
+                   <option>Ashulia</option>
+                   <option>Savar</option>
+                   
+                   
+           </optgroup>
+           <option>Turag</option>
+           
+           <optgroup label="Officer Name under Turag Thana(select any on them)" >
+                   <option>Ashulia</option>
+                   <option>Savar</option>
+                   
+                   
+           </optgroup>
+           <option>Banani</option>
+           
+           <optgroup label="Officer Name under Banani Thana(select any on them)">
+                   <option>Ashulia</option>
+                   <option>Savar</option>
+                   
+                   
+           </optgroup>
+           <option>Dhanmondi</option>
+           
+           <optgroup label="Officer Name under Dhanmondi Thana(select any on them)">
+                   <option>Ashulia</option>
+                   <option>Savar</option>
+                   
+                   
+           </optgroup>
+            </select> 
+
+            
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Enter Selected Officer Email</label>
+            <select name="officeremail" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" require>
+            <option> </option>
+            <option>Ashulia</option>
+           
+    <optgroup >
+            <option>Ashulia</option>
+            <option>Savar</option>
+            
+            
+    </optgroup>
+    <option>Savar</option>
+           
+           <optgroup >
+                   <option>Ashulia</option>
+                   <option>Savar</option>
+                   
+                   
+           </optgroup>
+           <option>Turag</option>
+           
+           <optgroup >
+                   <option>Ashulia</option>
+                   <option>Savar</option>
+                   
+                   
+           </optgroup>
+           <option>Banani</option>
+           
+           <optgroup >
+                   <option>Ashulia</option>
+                   <option>Savar</option>
+                   
+                   
+           </optgroup>
+           <option>Dhanmondi</option>
+           
+           <optgroup >
+                   <option>Ashulia</option>
+                   <option>Savar</option>
+                   
+                   
+           </optgroup>
+            </select> 
+
+            <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Enter Selected Officer Phone</label>
+            <select name="officerphone" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" require>
+            <option> </option>
+            <option>Ashulia</option>
+           
+    <optgroup >
+            <option>Ashulia</option>
+            <option>Savar</option>
+            
+            
+    </optgroup>
+    <option>Savar</option>
+           
+           <optgroup >
+                   <option>Ashulia</option>
+                   <option>Savar</option>
+                   
+                   
+           </optgroup>
+           <option>Turag</option>
+           
+           <optgroup >
+                   <option>Ashulia</option>
+                   <option>Savar</option>
+                   
+                   
+           </optgroup>
+           <option>Banani</option>
+           
+           <optgroup >
+                   <option>Ashulia</option>
+                   <option>Savar</option>
+                   
+                   
+           </optgroup>
+           <option>Dhanmondi</option>
+           
+           <optgroup >
+                   <option>Ashulia</option>
+                   <option>Savar</option>
+                   
+                   
+           </optgroup>
+            </select> 
+
+
+            
 </br>
 </br>
 

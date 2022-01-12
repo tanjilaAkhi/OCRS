@@ -18,6 +18,9 @@
 <p>Crime Place Photo: {{$list->image}}</p>
 <p>Police Station Name: {{$list->policestation}}</p>
 <p>Issused at: {{$list->issued_at}}</p>
+<p>Responsible Officer Name: {{$list->officername}}</p>
+<p>Responsible Officer Email: {{$list->officeremail}}</p>
+<p>Responsible Officer Phone: {{$list->officerphone}}</p>
 
 
 

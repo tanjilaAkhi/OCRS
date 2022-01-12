@@ -11,11 +11,11 @@
         <th scope="col">#</th>
         <th scope="col">NID No</th>
         <th scope="col">Name</th>
-        <th scope="col">Father's Name</th>
-        <th scope="col">Mother's Name</th>
+        <!-- <th scope="col">Father's Name</th>
+        <th scope="col">Mother's Name</th> -->
         <th scope="col">Cell</th>
         <th scope="col">Email</th>
-        <th scope="col">Date of Birth</th>
+        <!-- <th scope="col">Date of Birth</th> -->
         <th scope="col">Address</th>
         <th>Action</th>
         
@@ -28,11 +28,11 @@
         <th>{{$key+1}}</th>
         <td>{{$Nid->nid_no}}</td>
         <td>{{$Nid->name}}</td>
-        <td>{{$Nid->fname}}</td>
-        <td>{{$Nid->mname}}</td>
+        <!-- <td>{{$Nid->fname}}</td>
+        <td>{{$Nid->mname}}</td> -->
         <td>{{$Nid->cell}}</td>
         <td>{{$Nid->email}}</td>
-        <td>{{$Nid->birthdate}}</td>
+        <!-- <td>{{$Nid->birthdate}}</td> -->
         <td>{{$Nid->address}}</td>
         <td ><a  class="btn btn-success" href="{{route('admin.nid.details',$Nid->id)}}">View</a></td>
         <td ><a  class="btn btn-success"  href="{{route('admin.nid.edit',$Nid->id)}}" >Edit</a></td>
