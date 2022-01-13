@@ -190,43 +190,43 @@ button{
             <label for="exampleInputEmail1" class="form-label">Enter Officer Name</label>
             <select name="officername" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" require>
             <option> </option>
-            <option>Ashulia</option>
+            <option>Ashulia Thana</option>
            
-    <optgroup label="Officer Name under Ashulia Thana(select any on them)">
-            <option>Ashulia</option>
-            <option>Savar</option>
+    <optgroup label="Choose Selected Officer Email under Ashulia Thana">
+            <option>Salman Hasan(Police Officer)</option>
+            <option>Md Sazibur Rahman(Sub-Inspector)</option>
             
             
     </optgroup>
-    <option>Savar</option>
+    <option>Savar Thana</option>
            
-           <optgroup label="Officer Name under Savar Thana(select any on them)">
-                   <option>Ashulia</option>
-                   <option>Savar</option>
+           <optgroup label="Choose Selected Officer Email under Savar Thana">
+                   <option>Shohel Rahman(Police Officer)</option>
+                   <option>MITHUN MAITRA [avik](Sub-Inspector)</option>
                    
                    
            </optgroup>
-           <option>Turag</option>
+           <option>Turag Thana</option>
            
-           <optgroup label="Officer Name under Turag Thana(select any on them)" >
-                   <option>Ashulia</option>
-                   <option>Savar</option>
+           <optgroup label="Choose Selected Officer Email under Turag Thana" >
+                   <option>Nasir Ahmed(Sub-Inspector)</option>
+                   <option>Bhaskar Saha(Police Officer)</option>
                    
                    
            </optgroup>
-           <option>Banani</option>
+           <option>Banani Thana</option>
            
-           <optgroup label="Officer Name under Banani Thana(select any on them)">
-                   <option>Ashulia</option>
-                   <option>Savar</option>
+           <optgroup label="Choose Selected Officer Email under Banani Thana">
+                   <option>Sazzad Khan(Sub-Inspector)</option>
+                   <option>Sharif Uddin(Police Officer)</option>
                    
                    
            </optgroup>
-           <option>Dhanmondi</option>
+           <option>Dhanmondi Thana</option>
            
-           <optgroup label="Officer Name under Dhanmondi Thana(select any on them)">
-                   <option>Ashulia</option>
-                   <option>Savar</option>
+           <optgroup label="Choose Selected Officer Email under Dhanmondi Thana">
+                   <option>Abdus Salam(Police Officer)</option>
+                   <option>Rajib Deb(Sub-Inspector)</option>
                    
                    
            </optgroup>
@@ -237,43 +237,43 @@ button{
             <label for="exampleInputEmail1" class="form-label">Enter Selected Officer Email</label>
             <select name="officeremail" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" require>
             <option> </option>
-            <option>Ashulia</option>
+            <option>Ashulia Thana</option>
            
-    <optgroup >
-            <option>Ashulia</option>
-            <option>Savar</option>
+    <optgroup label="Officer Name under Dhanmondi Thana(select any on them)">
+            <option>Salman.Hasan@police.gov.bd</option>
+            <option>Sazibur.Rahman@police.gov.bd</option>
             
             
     </optgroup>
-    <option>Savar</option>
+    <option>Savar Thana</option>
            
-           <optgroup >
-                   <option>Ashulia</option>
-                   <option>Savar</option>
+           <optgroup label="Officer Name under Dhanmondi Thana(select any on them)">
+                   <option>Shohel.Rahman@police.gov.bd</option>
+                   <option>MITHUN.MAITRA@police.gov.bd</option>
                    
                    
            </optgroup>
-           <option>Turag</option>
+           <option>Turag Thana</option>
            
-           <optgroup >
-                   <option>Ashulia</option>
-                   <option>Savar</option>
+           <optgroup label="Officer Name under Dhanmondi Thana(select any on them)">
+                   <option>Nasir.Ahmed@police.gov.bd</option>
+                   <option>Bhaskar.Saha@police.gov.bd</option>
                    
                    
            </optgroup>
-           <option>Banani</option>
+           <option>Banani Thana</option>
            
-           <optgroup >
-                   <option>Ashulia</option>
-                   <option>Savar</option>
+           <optgroup label="Officer Name under Dhanmondi Thana(select any on them)">
+                   <option>Sazzad.Khan@police.gov.bd</option>
+                   <option>Sharif.Uddin@police.gov.bd</option>
                    
                    
            </optgroup>
-           <option>Dhanmondi</option>
+           <option>Dhanmondi Thana</option>
            
-           <optgroup >
-                   <option>Ashulia</option>
-                   <option>Savar</option>
+           <optgroup label="Officer Name under Dhanmondi Thana(select any on them)">
+                   <option>Abdus.Salam@police.gov.bd</option>
+                   <option>Rajib.Deb@police.gov.bd</option>
                    
                    
            </optgroup>
@@ -283,43 +283,48 @@ button{
             <label for="exampleInputEmail1" class="form-label">Enter Selected Officer Phone</label>
             <select name="officerphone" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" require>
             <option> </option>
-            <option>Ashulia</option>
+            <option>Ashulia Thana</option>
            
-    <optgroup >
-            <option>Ashulia</option>
-            <option>Savar</option>
+    <optgroup label="Salman">
+            <option>01711538313</option>
+    <optgroup label="Sazibur">
+            <option>01713373101</option>
             
             
     </optgroup>
-    <option>Savar</option>
+    <option>Savar Thana</option>
            
-           <optgroup >
-                   <option>Ashulia</option>
-                   <option>Savar</option>
+           <optgroup label="Shohel"> 
+                   <option>01713373103</option>
+          <optgroup label="MITHUN">
+                   <option>01711883712</option>
                    
                    
            </optgroup>
-           <option>Turag</option>
+           <option>Turag Thana</option>
            
-           <optgroup >
-                   <option>Ashulia</option>
-                   <option>Savar</option>
+           <optgroup label="Nasir">
+                   <option>01713373100</option>
+           <optgroup label="Bhaskar">
+                   <option> 01713373102</option>
                    
                    
            </optgroup>
-           <option>Banani</option>
+           <option>Banani Thana</option>
            
-           <optgroup >
-                   <option>Ashulia</option>
-                   <option>Savar</option>
+           <optgroup label="Sazzad">
+                   <option>01769691415</option>
+           <optgroup label="Sharif">
+                   <option>01713398370</option>
                    
                    
            </optgroup>
-           <option>Dhanmondi</option>
+           <option>Dhanmondi Thana</option>
            
-           <optgroup >
-                   <option>Ashulia</option>
-                   <option>Savar</option>
+           <optgroup label="Salam">
+                   <option>01713398402</option>
+           <optgroup label="Rajib">
+                   <option>01713398383</option>
                    
                    
            </optgroup>

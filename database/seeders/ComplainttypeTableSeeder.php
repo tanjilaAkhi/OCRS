@@ -19,31 +19,31 @@ class ComplainttypeTableSeeder extends Seeder
         complainttype::Create([
             'casenumber'=>'302',
             'casetype'=>'murder',
-            'casedetails'=>'Whoever '
+            'casedetails'=>'Shall be punished with death, or 2[imprisonment] for life, and shall also be liable to fine '
 
         ]);
         complainttype::Create([
             'casenumber'=>'2002',
             'casetype'=>'Acid Offences',
-            'casedetails'=>'If a person i'
+            'casedetails'=>'Capital punishment, or rigorous imprisonment for life'
 
         ]);
         complainttype::Create([
             'casenumber'=>'2010',
             'casetype'=>'Violence against women and children',
-            'casedetails'=>'If a person is involved '
+            'casedetails'=>'Will be imprisonment for upto three years and a fine '
 
         ]);
         complainttype::Create([
             'casenumber'=>'376',
             'casetype'=>'Rape',
-            'casedetails'=>'Whoever commits rape shall be punished '
+            'casedetails'=>'Shall be punished with 2[imprisonment] for life or with imprisonment  ten years, and shall also be liable to fine '
 
         ]);
         complainttype::Create([
             'casenumber'=>'363',
             'casetype'=>'Kidnapping',
-            'casedetails'=>'Whoever kidnaps any person '
+            'casedetails'=>'Shall be punished with imprisonment of  seven years, and shall also be liable to fine '
 
         ]);
 
