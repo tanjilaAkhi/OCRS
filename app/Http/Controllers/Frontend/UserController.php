@@ -52,7 +52,7 @@ class UserController extends Controller
     public function store(Request $request)
     {
 
-
+//  dd($request->all());
         //picture uploading
         $image_name=null;
         //              step 1: check image exist in this request.
@@ -69,27 +69,28 @@ class UserController extends Controller
         //end picture uploading
 
         //validation
-        $request->validate([
+        // $request->validate([
 
-            'date'=>'required',
-            'time'=>'required',
-            'cname'=>'required',
-            'c_address'=>'required',
-            'cell'=>'required|min:11',
-            'email'=>'required|email',
-            'casetype'=>'required',
-            'details'=>'required',
-            'dname'=>'required',
-            'address'=>'required',
-            'policestation'=>'required',
-            'issued_at'=>'required',
-            'officername'=>'required',
-            'officeremail'=>'required|email',
-            'officerphone'=>'required|min:11',
+        //     'date'=>'required',
+        //     'time'=>'required',
+        //     'cname'=>'required',
+        //     'c_address'=>'required',
+        //     'cell'=>'required|min:11',
+        //     'email'=>'required|email',
+        //     'casetype'=>'required',
+        //     'details'=>'required',
+        //     'dname'=>'required',
+        //     'address'=>'required',
+        //     'policestation'=>'required',
+        //     'issued_at'=>'required',
+        //     'officername'=>'required',
+        //     'officeremail'=>'required|email',
+        //     'officerphone'=>'required|min:11',
             
 
-        ]);
+        // ]);
 
+        
 
         Complaintform::create([
             // field name from DB ||  field name from form
@@ -123,8 +124,9 @@ class UserController extends Controller
 
     public function complainertable()
     {
-        $informations = complaintform::table('complainer')->latest('id')->first();
-       return view('user.websites.pdftable');
+        // $informations = complaintform::table('complainer')->latest('id')->first();
+        $informations = complaintform::orderBy('id','desc')->paginate(1);
+       return view('user.websites.pdftable',compact('informations'));
     }
     
 }

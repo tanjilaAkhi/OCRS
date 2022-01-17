@@ -33,6 +33,9 @@ class PolicestationController extends Controller
             'address'=>'required',
             'cell'=>'required|min:11',
             'email'=>'required|email',
+            'officername'=>'required',
+            'officeremail'=>'required|email',
+            'officerphone'=>'required|min:11',
 
         ]);
         // dd($request->all());
@@ -44,6 +47,10 @@ class PolicestationController extends Controller
             'telephone'=>$request->telephone,
             'cell'=>$request->cell,
             'email'=>$request->email,
+            'officername'=>$request->officername,
+            'officeremail'=>$request->officeremail,
+            'officerphone'=>$request->officerphone,
+
         ]);
         return redirect()->route('admin.stations');//back();
     }
@@ -87,6 +94,9 @@ class PolicestationController extends Controller
             'telephone'=>$request->telephone,
             'cell'=>$request->cell,
             'email'=>$request->email,
+            'officername'=>$request->officername,
+            'officeremail'=>$request->officeremail,
+            'officerphone'=>$request->officerphone,
             ]);
             return redirect()->route('admin.stations');
         }

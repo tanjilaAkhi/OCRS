@@ -20,8 +20,11 @@ class PolicestationTableSeeder extends Seeder
             'name'=>'Ashulia',
             'address'=>'Ashulia Bazar',
             'telephone'=>'9654',
-            'cell'=>'01734',
-            'email'=>'ashulia@gmail.com'
+            'cell'=>'01736666666',
+            'email'=>'ashulia@gmail.com',
+            'officername'=>'Salman Hasan(Police Officer)',
+            'officeremail'=>'Salman.Hasan@police.gov.bd',
+            'officerphone'=>'01711538313'
 
         ]);
 
@@ -30,35 +33,48 @@ class PolicestationTableSeeder extends Seeder
             'name'=>'Savar Thana',
             'address'=>'Savar',
             'telephone'=>'8965',
-            'cell'=>'01234',
-            'email'=>'saver@gmail.com'
+            'cell'=>'01235554444',
+            'email'=>'saver@gmail.com',
+            'officername'=>'Shohel Rahman(Police Officer)',
+            'officeremail'=>'Shohel.Rahman@police.gov.bd',
+            'officerphone'=>'01713373103'
+
 
         ]);
         policestation::Create([
             'dmp'=>'12367',
-            'name'=>'uttara',
+            'name'=>'Turag Thana',
             'address'=>'uttara sector-10',
             'telephone'=>'9365',
-            'cell'=>'0193',
-            'email'=>'uttara@gmail.com'
+            'cell'=>'01934444444',
+            'email'=>'uttara@gmail.com',
+            'officername'=>'Nasir Ahmed(Sub-Inspector)',
+            'officeremail'=>'Nasir.Ahmed@police.gov.bd',
+            'officerphone'=>'01713373100'
 
         ]);
         policestation::Create([
             'dmp'=>'187456',
-            'name'=>'Banani',
+            'name'=>'Banani Thana',
             'address'=>'Banani',
             'telephone'=>'5664',
-            'cell'=>'01933',
-            'email'=>'banani@gmail.com'
+            'cell'=>'01933333333',
+            'email'=>'banani@gmail.com',
+            'officername'=>'Sazzad Khan(Sub-Inspector)',
+            'officeremail'=>'Sazzad.Khan@police.gov.bd',
+            'officerphone'=>'01769691415'
 
         ]);
         policestation::Create([
             'dmp'=>'122256',
-            'name'=>'Gulshan',
-            'address'=>'Gulshan',
+            'name'=>'Dhanmondi Thana',
+            'address'=>'Dhanmondi',
             'telephone'=>'9666',
-            'cell'=>'01953',
-            'email'=>'gulshan@gmail.com'
+            'cell'=>'01953000000',
+            'email'=>'dhanmondi@gmail.com',
+            'officername'=>'Abdus Salam(Police Officer)',
+            'officeremail'=>'Abdus.Salam@police.gov.bd',
+            'officerphone'=>'01713398402'
 
         ]);
         

@@ -21,6 +21,9 @@ class CreatePolicestationsTable extends Migration
             $table->integer('telephone');
             $table->integer('cell');
             $table->string('email');
+            $table->string('officername');
+            $table->string('officeremail');
+            $table->string('officerphone');
             $table->timestamps();
         });
     }

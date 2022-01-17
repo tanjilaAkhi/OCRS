@@ -19,6 +19,9 @@
         <!-- <th scope="col">Telephone</th> -->
         <th scope="col">Cell</th>
         <th scope="col">Email</th>
+        <th scope="col">Officer's Name</th>
+        <!-- <th scope="col">Officer's Email</th>
+        <th scope="col">Officer's Phone</th> -->
         <th>Action</th>
         
     </tr>
@@ -33,6 +36,9 @@
         <td>{{$policestation->telephone}}</td> -->
         <td>{{$policestation->cell}}</td>
         <td>{{$policestation->email}}</td>
+        <td>{{$policestation->officername}}</td>
+        <!-- <td>{{$policestation->officeremail}}</td>
+        <td>{{$policestation->officerphone}}</td> -->
         <td ><a class="btn btn-success" href="{{route('admin.station.details',$policestation->id)}}" >View</a></td>
         <td ><a class="btn btn-success" href="{{route('admin.station.edit',$policestation->id)}}" >Edit</a></td>
         <td ><a class="btn btn-success" href="{{route('admin.station.delete',$policestation->id)}}" >Delete</a></td>

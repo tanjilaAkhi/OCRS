@@ -51,6 +51,22 @@
             <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" require>
         </div>
         
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Enter Officer Name</label>
+            <input name="officername" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" require>
+        </div>
+
+
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Enter Officer Email</label>
+            <input name="officeremail" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" require>
+        </div>
+
+        
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Enter Oficer Phone</label>
+            <input name="officerphone" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" require>
+        </div>
 
         <button type="submit" class="btn btn-primary">Submit</button>
         

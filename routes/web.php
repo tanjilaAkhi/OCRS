@@ -33,6 +33,8 @@ use App\Http\Controllers\Frontend\ContactController;
         // })->name('admin');
 
 Route::group(['prefix'=>'user'],function(){
+
+    
         Route::get('/', function () {
             return view('user.master');
 

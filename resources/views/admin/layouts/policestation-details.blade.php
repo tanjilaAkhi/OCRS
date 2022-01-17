@@ -11,6 +11,9 @@
 <p>Police Station Telephone: {{$policestation->telephone}}</p>
 <p>Police Station Cell: {{$policestation->cell}}</p>
 <p>Police Station Email: {{$policestation->email}}</p>
+<p>Police Station Officer Name: {{$policestation->officername}}</p>
+<p>Police Station Officer Email: {{$policestation->officeremail}}</p>
+<p>Police Station Officer Phone: {{$policestation->officerphone}}</p>
 
     
 
