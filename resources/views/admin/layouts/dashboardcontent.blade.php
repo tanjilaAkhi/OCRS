@@ -17,6 +17,7 @@
         <th scope="col">Selected Officer's  Email</th>
         <th scope="col">Selected Officer's Phone Number</th>
         <th scope="col">Case Status</th>
+        <th scope="col">Action</th>
         
         
     </tr>
@@ -32,15 +33,9 @@
         <td>{{$monitor->officername}}</td>
         <td>{{$monitor->officeremail}}</td>
         <td>{{$monitor->officerphone}}</td>
-        
-        <td ><a class="btn btn-xs btn-default bt-pn" href="javascript:;" data-id={{$monitor->id}}>
-                                Pending
-                            </a>
-                           
-                            <a class="btn btn-xs btn-primary bt-cf" href="javascript:;" data-id={{$monitor->id}}>
-                                Solved
-                            </a></td>
-       
+        <td>{{$monitor->case_status}}</td>
+        <td ><a  class="btn btn-success" href="{{route('user.form.status.solved',$monitor->id)}}">Solved</a></td>
+        <td ><a  class="btn btn-success" href="{{route('admin.info.delete',$monitor->id)}}">Delete</a></td>
         
     </tr>
     @endforeach

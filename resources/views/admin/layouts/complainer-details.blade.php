@@ -16,7 +16,7 @@
 <p>Defendant Name: {{$list->dname}}</p>
 <p>Defendant Address: {{$list->address}}</p>
 <!-- <p>Crime Place Photo: {{$list->image}}</p> -->
-<p>
+<p>Crime Place Photo:
             <img style="border-radius: 4px;" width="200px;" src=" {{url('/uploads/'.$list->image)}}" alt="image">
         </p>
 <p>Police Station Name: {{$list->policestation}}</p>

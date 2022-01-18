@@ -50,19 +50,20 @@
             <input  value="{{$policestation->officername}}" name="officername" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" require>
         </div>
 
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Enter Oficer Phone</label>
-            <input  value="{{$policestation->officerphone}}" name="officerphone" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" require>
-        </div>
 
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Enter Officer Email</label>
             <input value="{{$policestation->officeremail}}"  name="officeremail" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" require>
         </div>
 
+        
+        <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Enter Oficer Phone</label>
+            <input  value="{{$policestation->officerphone}}" name="officerphone" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" require>
+        </div>
 
     
-    <button type="submit" class="btn btn-success">Submit</button>
+    <button type="submit" class="btn btn-success">Update</button>
 </form>
 
 @endsection

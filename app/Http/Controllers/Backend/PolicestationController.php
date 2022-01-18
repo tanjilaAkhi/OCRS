@@ -8,10 +8,27 @@ use App\Models\policestation;
 
 class PolicestationController extends Controller
 {
-    public function policestationList()
+    public function policestationList(Request $request)
     {
-        $lists = policestation::all();//table a sob dekhanor jonno
-        return view('admin.layouts.station-list' ,compact('lists'));//compact korci list table a dekhanor jonno
+        $lists = policestation::all();
+        //search part start
+        $search = $request->query('search');
+        // dd($search);
+        // dd(request()->all());
+        if ($search) {
+            $lists = policestation::where('name', 'Like', '%' . $search . '%')
+                ->orWhere('name', 'like', '%' . $search . '%')->get();
+                // dd('in if');
+            return view('admin.layouts.station-list', compact('lists'));
+        }
+        else {
+            return view('admin.layouts.station-list' ,compact('lists'));//compact korci list table a dekhanor jonno
+        }
+
+        //search part end
+
+        
+        
     }
 
     public function stationCreate()
@@ -101,6 +118,9 @@ class PolicestationController extends Controller
             return redirect()->route('admin.stations');
         }
     }
+
+
+    
 
 
 

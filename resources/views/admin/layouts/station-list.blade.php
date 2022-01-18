@@ -9,6 +9,21 @@
     <h1>Police Station list</h1>
     <a href="{{route('admin.stations.create')}}" class="btn btn-success">Create new Police Station</a>
 
+<!-- search er part -->
+<form action="{{route('admin.stations')}}">
+<div class="input-group rounded mt-3 mb-2">
+  <div class="form-outline">
+    <input type="search" id="form1" class="form-control" name="search" placeholder="Search" arial-label="Search" aria-describedby="search-addon" />
+    <!-- <label class="form-label" for="form1">Search</label> -->
+  </div>
+  <button type="submit" class="btn btn-primary">
+    <i class="fas fa-search"></i>
+  </button>
+</div>
+
+</form>
+<!-- end search part -->
+
     <table class="table">
     <thead>
     <tr>
@@ -41,7 +56,7 @@
         <td>{{$policestation->officerphone}}</td> -->
         <td ><a class="btn btn-success" href="{{route('admin.station.details',$policestation->id)}}" >View</a></td>
         <td ><a class="btn btn-success" href="{{route('admin.station.edit',$policestation->id)}}" >Edit</a></td>
-        <td ><a class="btn btn-success" href="{{route('admin.station.delete',$policestation->id)}}" >Delete</a></td>
+        <td ><a onclick = "return confirm('Are You Sure?')" class="btn btn-success" href="{{route('admin.station.delete',$policestation->id)}}" >Delete</a></td>
        
         
     </tr>

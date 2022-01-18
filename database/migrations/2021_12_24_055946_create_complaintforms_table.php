@@ -31,6 +31,7 @@ class CreateComplaintformsTable extends Migration
             $table->string('officername');
             $table->string('officeremail');
             $table->string('officerphone');
+            $table->string('case_status')->default('pending');
             $table->timestamps();
         });
     }

@@ -57,6 +57,8 @@ Route::group(['prefix'=>'user'],function(){
     Route::post('/verified',[UserController::class,'verified'])->name('user.do.verification');
     Route::get('/form/create',[UserController::class,'caseformCreate'])->name('user.form.create');// form create korer jonno
     Route::post('/form/store',[UserController::class,'store'])->name('user.form.store');//database a data submit korer  jonno
+    Route::get('/form/status/Solved//{id}',[UserController::class,'status_solved'])->name('user.form.status.solved');
+    Route::get('/form/delete/{id}',[UserController::class,'InfoDelete'])->name('admin.info.delete');
     Route::get('/form/confirmation',[UserController::class,'confirmation'])->name('user.form.confirmation');
     Route::get('/form/table',[UserController::class,'complainertable'])->name('admin.complainer.table');
     //end NID + case filed 
@@ -101,6 +103,7 @@ Route::post('/login',[LoginController::class,'login'])->name('admin.do.login');
     Route::get('/stations/delete/{station_id}',[PolicestationController::class,'policestationDelete'])->name('admin.station.delete');
     Route::get('/stations/edit/{id}',[PolicestationController::class,'policestationEdit'])->name('admin.station.edit');
     Route::put('/stations/update/{id}',[PolicestationController::class,'policestationUpdate'])->name('admin.station.update');
+    
     
     //end police station
 
