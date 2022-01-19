@@ -10,10 +10,22 @@ use App\Models\Nid;
 class NidController extends Controller
 {
 
-    public function nidList()
+    public function nidList(Request $request)
     {
         $nids = Nid::all();
-        return view('admin.layouts.nid-list' , compact('nids'));
+        $search = $request->query('search');
+        // dd($search);
+        // dd(request()->all());
+        if ($search) {
+            $lists = Nid::where('name', 'Like', '%' . $search . '%')
+                ->orWhere('name', 'like', '%' . $search . '%')->get();
+                // dd('in if');
+            return view('admin.layouts.nid-list', compact('nids'));
+        }
+        else {
+            return view('admin.layouts.nid-list' , compact('nids'));
+        }
+        
     }
 
 
@@ -33,7 +45,7 @@ class NidController extends Controller
          'name'=>'required',
          'fname'=>'required',
          'mname'=>'required',
-         'cell'=>'required|min:11',
+         'cell'=>'required',
          'email'=>'required|email',
          'birthday'=>'required',
          'address'=>'required',

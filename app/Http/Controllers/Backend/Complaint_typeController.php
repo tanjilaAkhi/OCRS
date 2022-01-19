@@ -8,10 +8,22 @@ use App\Models\complainttype;
 
 class Complaint_typeController extends Controller
 {
-    public function complaint_typeList()
+    public function complaint_typeList(Request $request)
     {
         $types = complainttype::all();
-        return view('admin.layouts.complaint_type-list ' ,compact('types'));
+        $search = $request->query('search');
+        // dd($search);
+        // dd(request()->all());
+        if ($search) {
+            $lists = complainttype::where('type', 'Like', '%' . $search . '%')
+                ->orWhere('type', 'like', '%' . $search . '%')->get();
+                // dd('in if');
+            return view('admin.layouts.complaint_type-list', compact('types'));
+        }
+        else {
+            return view('admin.layouts.complaint_type-list ' ,compact('types'));
+        }
+       
     }
 //create form
     public function complaint_typeCreate()

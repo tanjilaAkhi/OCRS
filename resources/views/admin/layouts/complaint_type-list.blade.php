@@ -18,6 +18,20 @@
 <h1>Complaint Type list</h1>
 <a href="{{route('admin.complaint_types.create')}}" class="btn btn-success">Create new Complaint Type</a>
 
+<!-- search er part -->
+<form action="{{route('admin.complaint_types')}}">
+<div class="input-group rounded mt-3 mb-2">
+  <div class="form-outline">
+    <input type="search" id="form1" class="form-control" name="search" placeholder="Search" arial-label="Search" aria-describedby="search-addon" />
+    <!-- <label class="form-label" for="form1">Search</label> -->
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+    <i class="fas fa-search"></i>
+  </button>
+</div>
+
+</form>
+
 
     <table class="table">
     <thead>
@@ -38,7 +52,7 @@
         <!-- <td>{{$complainttype->casedetails}}</td> -->
         <td ><a href="{{route('admin.complaint_types.details',$complainttype->id)}}" class="btn btn-success">View</a></td>
         <td ><a href="{{route('admin.complaint_types.edit',$complainttype->id)}}" class="btn btn-success">Edit</a></td>
-        <td ><a href="{{route('admin.complaint_types.delete',$complainttype->id)}}" class="btn btn-success">Delete</a></td>
+        <td ><a onclick = "return confirm('Are You Sure?')" href="{{route('admin.complaint_types.delete',$complainttype->id)}}" class="btn btn-success">Delete</a></td>
         
     </tr>
     @endforeach

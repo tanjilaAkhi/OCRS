@@ -5,6 +5,20 @@
     <h1>NID Information Table</h1>
     <a href="{{route('admin.nids.create')}}" class="btn btn-success">Create new NID</a>
 
+    <!-- search er part -->
+<form action="{{route('admin.nids')}}">
+<div class="input-group rounded mt-3 mb-2">
+  <div class="form-outline">
+    <input type="search" id="form1" class="form-control" name="search" placeholder="Search" arial-label="Search" aria-describedby="search-addon" />
+    <!-- <label class="form-label" for="form1">Search</label> -->
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+    <i class="fas fa-search"></i>
+  </button>
+</div>
+
+</form>
+
     <table class="table">
     <thead>
     <tr>
@@ -36,7 +50,7 @@
         <td>{{$Nid->address}}</td>
         <td ><a  class="btn btn-success" href="{{route('admin.nid.details',$Nid->id)}}">View</a></td>
         <td ><a  class="btn btn-success"  href="{{route('admin.nid.edit',$Nid->id)}}" >Edit</a></td>
-        <td ><a  class="btn btn-success" href="{{route('admin.nid.delete',$Nid->id)}}">Delete</a></td>
+        <td ><a  onclick = "return confirm('Are You Sure?')" class="btn btn-success" href="{{route('admin.nid.delete',$Nid->id)}}">Delete</a></td>
        
         
     </tr>

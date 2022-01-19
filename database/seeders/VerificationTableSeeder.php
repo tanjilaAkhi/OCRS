@@ -19,7 +19,8 @@ class VerificationTableSeeder extends Seeder
         User::Create([
             'name'=>'User 1',
             'password'=>bcrypt('12345'),
-            'email'=>'m@gmail.com'
+            'email'=>'m@gmail.com',
+            'cell'=>'01922222222'
 
         ]);
 

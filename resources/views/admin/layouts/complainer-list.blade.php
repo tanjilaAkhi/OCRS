@@ -54,7 +54,7 @@
         <!-- <td>{{$list->officeremail}}</td>
         <td>{{$list->officerphone}}</td> -->
         <td ><a  class="btn btn-success" href="{{route('admin.complainer.details', $list->id)}}">View</a></td>
-        <td ><a  class="btn btn-success" href="{{route('admin.complainer.delete', $list->id)}}">Delete</a></td>
+        <td ><a onclick = "return confirm('Are You Sure?')" class="btn btn-success" href="{{route('admin.complainer.delete', $list->id)}}">Delete</a></td>
        
         
     </tr>

@@ -6,41 +6,14 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Complaintform;
 use App\Models\Nid;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
    
-
-    //NID form method
-
-    public function verification()
-    {
-        return view('user.websites.verification');
-    }
-
-
-    public function verified(Request $request)
-    {
-        // dd($request->all());
-        $userInfo=$request->except('_token');
-        // dd($userInfo);
-        $userFind = Nid::where('nid_no',$userInfo)->get();
-        // dd($userFind->all());
-        if (empty($userFind->all())) {
-            return redirect()->route('user.verification')->with('success','Invalid user credentials');
-        }
-        else {
-            return redirect()->route('user.form.create')->with('error','verified successfully.');
-
-            
-        }
-                
-             
-           
-
-    }
-    //form er code
+    
+    
 
     public function caseformCreate()
     {
@@ -148,6 +121,49 @@ class UserController extends Controller
        complaintform::find($id)->delete();
        return redirect()->back()->with('success','Policestation is Deleted.');
     }
+
+
+
+    //registration
+    public function registration()
+    {
+        return view('user.websites.userregistration');
+    }
+
+    public function submit(Request $request)
+    {
+
+
+       
+
+        //validation
+        // $request->validate([
+
+        //     'dmp'=>'required',
+        //     'name'=>'required',
+        //     'address'=>'required',
+        //     'cell'=>'required|min:11',
+        //     'email'=>'required|email',
+        //     'officername'=>'required',
+        //     'officeremail'=>'required|email',
+        //     'officerphone'=>'required|min:11',
+
+        // ]);
+        // dd($request->all());
+        User::create([
+            // field name from DB ||  field name from form
+            
+            'name'=>$request->name,
+            'cell'=>$request->cell,
+            'email'=>$request->email,
+            'password'=>bcrypt($request->password),
+            
+
+        ]);
+        return redirect()->back()->with('success','Registration Successful.');;
+    }
+
+    //end registration
     
 }
 

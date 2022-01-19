@@ -34,8 +34,8 @@
         <td>{{$monitor->officeremail}}</td>
         <td>{{$monitor->officerphone}}</td>
         <td>{{$monitor->case_status}}</td>
-        <td ><a  class="btn btn-success" href="{{route('user.form.status.solved',$monitor->id)}}">Solved</a></td>
-        <td ><a  class="btn btn-success" href="{{route('admin.info.delete',$monitor->id)}}">Delete</a></td>
+        <td ><a onclick = "return confirm('Are You Sure?')" class="btn btn-success" href="{{route('user.form.status.solved',$monitor->id)}}">Solved</a></td>
+        <td ><a onclick = "return confirm('Are You Sure?')"  class="btn btn-success" href="{{route('admin.info.delete',$monitor->id)}}">Delete</a></td>
         
     </tr>
     @endforeach

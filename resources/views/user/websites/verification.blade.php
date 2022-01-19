@@ -103,7 +103,7 @@ body{
 <body>
  <div class="container">
  <!---heading---->
-     <header class="heading"> Verification-Form</header><hr></hr>
+     <header class="heading"> Login-Form</header><hr></hr>
 	<!---Form starting----> 
 
 @if(session('success'))
@@ -135,16 +135,42 @@ body{
 				
 				     <div class="col-xs-4">
 					
-							   <label for="password" class="text-info">NID Number</label>
+							   <label for="name" class="text-info">USER NAME</label>
 							   
-							  
-							</div>
+							  </div>
+							
+			 
 						
 				  <div class="col-xs-8">
 			             <!-- <input name="password" type="password"  placeholder="Enter your nid number" class="form-control" require> -->
-			             <input name="password" type="number"  placeholder="Enter your nid number" class="form-control" require>
+			             <input name="name" type="text"  placeholder="Enter your name" class="form-control" require>
 
 				 </div>
+				 
+          </div>
+		  </div>
+		  </br>
+</br>
+</br>
+</br>
+		  <div class="col-sm-12">
+		         <div class="row">
+				
+				     <div class="col-xs-4">
+					
+							   <label for="password" class="text-info">USER PASSWORD</label>
+							   
+							  
+							</div>
+							
+			 
+						
+				  <div class="col-xs-8">
+			             <!-- <input name="password" type="password"  placeholder="Enter your nid number" class="form-control" require> -->
+			             <input name="password" type="password"  placeholder="Enter your password" class="form-control" require>
+
+				 </div>
+				 
           </div>
 		  </div>
 </br>

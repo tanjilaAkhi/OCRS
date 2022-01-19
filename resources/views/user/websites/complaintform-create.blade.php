@@ -170,7 +170,7 @@ button{
             <label for="exampleInputEmail1" class="form-label">Enter Police Station</label>
             <select name="policestation" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" require>
             <option> </option>
-            <option>General Dairy(GD)</option>
+            
            
     <optgroup label="Criminal Case(select any on them)">
             <option>Ashulia</option>

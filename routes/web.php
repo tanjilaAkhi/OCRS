@@ -8,6 +8,7 @@ use App\Http\Controllers\Backend\LoginController;
 use App\Http\Controllers\Backend\SurveyController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontend\UserController;
+use App\Http\Controllers\Frontend\UserloginController;
 use App\Http\Controllers\Frontend\ContactController;
 
 
@@ -32,15 +33,24 @@ use App\Http\Controllers\Frontend\ContactController;
         //     return view('admin.master');
         // })->name('admin');
 
+        //Admin login
+    Route::get('/verification',[UserloginController::class,'verification'])->name('user.verification');
+    Route::post('/verification',[UserloginController::class,'verified'])->name('user.do.verification');
+// //end Admin login 
+
+Route::get('/', function () {
+    return view('user.master');
+
+
+
+})->name ('user');
+
 Route::group(['prefix'=>'user'],function(){
+    
+  Route::group(['middleware'=>['auth','Userlogin']],function (){ 
 
     
-        Route::get('/', function () {
-            return view('user.master');
-
-
-
-    });//->name ('user');
+      
     //
 
     //Contact
@@ -51,10 +61,11 @@ Route::group(['prefix'=>'user'],function(){
     Route::get('/emergencycontact',[ContactController::class,'emergencycontact'])->name('user.emergencycontact');
     //end emergency contact
 
+    
     //NID verification
 
-    Route::get('/verification',[UserController::class,'verification'])->name('user.verification');
-    Route::post('/verified',[UserController::class,'verified'])->name('user.do.verification');
+    Route::get('/registration',[UserController::class,'registration'])->name('user.registration');
+    Route::post('/registrations/submit',[UserController::class,'submit'])->name('admin.registrations.submit');
     Route::get('/form/create',[UserController::class,'caseformCreate'])->name('user.form.create');// form create korer jonno
     Route::post('/form/store',[UserController::class,'store'])->name('user.form.store');//database a data submit korer  jonno
     Route::get('/form/status/Solved//{id}',[UserController::class,'status_solved'])->name('user.form.status.solved');
@@ -66,7 +77,7 @@ Route::group(['prefix'=>'user'],function(){
 
 
 
-// });
+});
 //end user panel related
 });
 
