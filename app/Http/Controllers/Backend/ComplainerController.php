@@ -9,14 +9,23 @@ use Illuminate\Http\Request;
 class ComplainerController extends Controller
 {
 
-    public function complainerList()
+    public function complainerList(Request $request)
     {
 
 $lists=Complaintform::all();
-
+$search = $request->query('search');
+        // dd($search);
+        // dd(request()->all());
+        if ($search) {
+            $lists = complaintform::where('nid_no', 'Like', '%' . $search . '%')
+                ->orWhere('nid_no', 'like', '%' . $search . '%')->get();
+                // dd('in if');
 
         return view('admin.layouts.complainer-list' ,compact ('lists'));
     }
+    else {
+        return view('admin.layouts.complainer-list' ,compact ('lists'));
+    }}
 
     public function complainerDetails($complainer_id)
     {

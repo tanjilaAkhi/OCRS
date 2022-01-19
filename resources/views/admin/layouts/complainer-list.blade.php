@@ -4,10 +4,25 @@
 
     <h1>Complainer list</h1>
 
+<!-- search er part -->
+<form action="{{route('admin.complainers')}}">
+<div class="input-group rounded mt-3 mb-2">
+  <div class="form-outline">
+    <input type="search" id="form1" class="form-control" name="search" placeholder="Search" arial-label="Search" aria-describedby="search-addon" />
+    <!-- <label class="form-label" for="form1">Search</label> -->
+  </div>
+  <button type="submit" class="btn btn-primary">Search</button>
+    <i class="fas fa-search"></i>
+  </button>
+</div>
+
+</form>
+
     <table class="table">
     <thead>
     <tr>
         <th scope="col">#</th>
+        <th scope="col">NID Number</th>
         <th scope="col">Issue Date</th>
         <!-- <th scope="col">Issue Time</th> -->
         <th scope="col">Complainer Name</th>
