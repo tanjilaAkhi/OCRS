@@ -17,7 +17,7 @@ class DatabaseSeeder extends Seeder
         $this->call([VerificationTableSeeder::class]);
         $this->call([PolicestationTableSeeder::class ]);
         $this->call([ComplainttypeTableSeeder::class]);
-        $this->call([NidTableSeeder::class]);
+        // $this->call([NidTableSeeder::class]);
     }
 
     

@@ -34,6 +34,7 @@
     @foreach($lists as $key=>$list) <!--data database theke table a show korer code (data retrive)--> 
     <tr>
         <th>{{$key+1}}</th>
+        <td>{{$list->nid_no}}</td>
         <td>{{$list->date}}</td>
         <!-- <td>{{$list->time}}</td> -->
         <td>{{$list->cname}}</td>

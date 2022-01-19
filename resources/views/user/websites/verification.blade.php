@@ -1,5 +1,5 @@
 
-<h1 style="color: White; text-align:center; " >Enter Your NID Number</h1>
+<h1 style="color: White; text-align:center; " >Enter Your LOG IN INFORMATION</h1>
     
 
        

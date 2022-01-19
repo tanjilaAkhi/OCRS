@@ -3,7 +3,7 @@
 use App\Http\Controllers\Backend\PolicestationController;
 use App\Http\Controllers\Backend\Complaint_typeController;
 use App\Http\Controllers\Backend\ComplainerController;
-use App\Http\Controllers\Backend\NidController;
+use App\Http\Controllers\Backend\FeedbackController;
 use App\Http\Controllers\Backend\LoginController;
 use App\Http\Controllers\Backend\SurveyController;
 use Illuminate\Support\Facades\Route;
@@ -33,10 +33,16 @@ use App\Http\Controllers\Frontend\ContactController;
         //     return view('admin.master');
         // })->name('admin');
 
-        //Admin login
+
+
+        
+
+Route::group(['prefix'=>'user'],function(){
+
+    //User login
     Route::get('/verification',[UserloginController::class,'verification'])->name('user.verification');
     Route::post('/verification',[UserloginController::class,'verified'])->name('user.do.verification');
-// //end Admin login 
+// //end User login 
 
 Route::get('/', function () {
     return view('user.master');
@@ -44,15 +50,6 @@ Route::get('/', function () {
 
 
 })->name ('user');
-
-Route::group(['prefix'=>'user'],function(){
-    
-  Route::group(['middleware'=>['auth','Userlogin']],function (){ 
-
-    
-      
-    //
-
     //Contact
     Route::get('/contact',[ContactController::class,'contact'])->name('user.contact');
     //end Contact
@@ -61,18 +58,30 @@ Route::group(['prefix'=>'user'],function(){
     Route::get('/emergencycontact',[ContactController::class,'emergencycontact'])->name('user.emergencycontact');
     //end emergency contact
 
-    
-    //NID verification
-
+    //User registration
     Route::get('/registration',[UserController::class,'registration'])->name('user.registration');
     Route::post('/registrations/submit',[UserController::class,'submit'])->name('admin.registrations.submit');
+    //end user registration
+
+    //feedback
+    Route::get('/feedback',[UserloginController::class,'feedback'])->name('user.feedback');
+    Route::get('/feedback/delete/{feedback_id}',[UserloginController::class,'feedbackDelete'])->name('admin.feedback.delete');
+    //end feedback
+    
+  Route::group(['middleware'=>['auth','Userlogin']],function (){ 
+    
+    //sign out
+    Route::get('/logout',[UserloginController::class,'logout'])->name('user.logout');
+    //end sign out
+
+    //complaint registration
     Route::get('/form/create',[UserController::class,'caseformCreate'])->name('user.form.create');// form create korer jonno
     Route::post('/form/store',[UserController::class,'store'])->name('user.form.store');//database a data submit korer  jonno
     Route::get('/form/status/Solved//{id}',[UserController::class,'status_solved'])->name('user.form.status.solved');
     Route::get('/form/delete/{id}',[UserController::class,'InfoDelete'])->name('admin.info.delete');
     Route::get('/form/confirmation',[UserController::class,'confirmation'])->name('user.form.confirmation');
     Route::get('/form/table',[UserController::class,'complainertable'])->name('admin.complainer.table');
-    //end NID + case filed 
+    //end complaint registration 
 
 
 
@@ -95,7 +104,7 @@ Route::get('/login',[LoginController::class,'page'])->name('admin.login');
 Route::post('/login',[LoginController::class,'login'])->name('admin.do.login');
 // //end Admin login 
 
-  Route::group(['middleware'=>'auth'],function (){ //middleware applied in the whole section to prevent the unauthorized access
+  Route::group(['middleware'=>['auth','Adminlogin']],function (){ //middleware applied in the whole section to prevent the unauthorized access
     Route::get('/', function () {
         return view('admin.master');
     })->name('admin');
@@ -147,16 +156,16 @@ Route::post('/login',[LoginController::class,'login'])->name('admin.do.login');
     Route::get('/surveys',[SurveyController::class,'surveyList'])->name('admin.surveys');
     //end complainer list
 
-    //NID information Code
+    //Feedback Route
    
-    Route::get('/nids',[NidController::class,'nidList'])->name('admin.nids');//list show koranor jonno
-    Route::get('/nids/create',[NidController::class,'nidCreate'])->name('admin.nids.create');// form create korer jonno
-    Route::post('/nids/store',[NidController::class,'store'])->name('admin.nids.store');//database a data submit korer  jonno
-    Route::get('/nids/view/{Nid_id}',[NidController::class,'nidDetails'])->name('admin.nid.details');
-    Route::get('/nids/delete/{Nid_id}',[NidController::class,'nidDelete'])->name('admin.nid.delete');
-    Route::get('/nids/edit/{id}',[NidController::class,'nidEdit'])->name('admin.nid.edit');
-    Route::put('/nids/update/{id}',[NidController::class,'nidUpdate'])->name('admin.nid.update');
-    //End NID information Code
+    Route::get('/feedbacks',[FeedbackController::class,'feedbackList'])->name('admin.feedbacks');//list show koranor jonno
+    Route::get('/feedbacks/create',[FeedbackController::class,'feedbackCreate'])->name('admin.feedbacks.create');// form create korer jonno
+    Route::post('/feedbacks/store',[FeedbackController::class,'store'])->name('admin.feedbacks.store');//database a data submit korer  jonno
+    Route::get('/feedbacks/view/{id}',[FeedbackController::class,'feedbackDetails'])->name('admin.feedback.details');
+    Route::get('/feedbacks/delete/{id}',[FeedbackController::class,'feedbackDelete'])->name('admin.feedback.delete');
+    Route::get('/feedbacks/edit/{id}',[FeedbackController::class,'feedbackEdit'])->name('admin.feedback.edit');
+    Route::put('/feedbacks/update/{id}',[FeedbackController::class,'feedbackUpdate'])->name('admin.feedback.update');
+    //End Feedback Route
     
 });//end admin panel
 

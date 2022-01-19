@@ -21,7 +21,9 @@
 
 
 </li>
-<li id="menu-item-5677" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="{{ route ('user.registration')}}">REGISTRATION</a></LI>
+<li id="menu-item-5677" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="{{ route ('user.registration')}}">REGISTRATION</a></li>
+
+<li id="menu-item-5677" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="{{route('user.feedback')}}">FEEDBACK</a></LI>
 </ul>
 
 

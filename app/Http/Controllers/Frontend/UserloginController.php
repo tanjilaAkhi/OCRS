@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use App\Models\Feedback;
 
 class UserloginController extends Controller
 {
@@ -34,7 +35,27 @@ class UserloginController extends Controller
            
 
     } 
-            
+
+    public function logout()
+    {
+        Auth::logout();
+        return redirect()->route('user.verification')->with('message','Logging out.');
+    }
+
+    //feedback code
+    public function feedback()
+    {
+        $reviews=Feedback::orderBy('id','desc')->paginate(1);
+        return view('user.websites.userfeedback',compact('reviews'));
+    }
+    //end feedback code
+      
+    public function feedbackDelete($feedback_id)
+    {
+    Feedback::find($feedback_id)->delete();
+       return redirect()->route('user')->with('success','Record is Deleted.');
+    }
+
           
 
    //form er code

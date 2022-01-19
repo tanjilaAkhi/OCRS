@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Complaintform;
-use App\Models\Nid;
+use App\Models\Feedback;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -42,31 +42,32 @@ class UserController extends Controller
         //end picture uploading
 
         //validation
-        $request->validate([
+        // $request->validate([
 
-            'date'=>'required',
-            'time'=>'required',
-            'cname'=>'required',
-            'c_address'=>'required',
-            'cell'=>'required|min:11',
-            'email'=>'required|email',
-            'casetype'=>'required',
-            'details'=>'required',
-            'dname'=>'required',
-            'address'=>'required',
-            'policestation'=>'required',
-            'issued_at'=>'required',
-            'officername'=>'required',
-            'officeremail'=>'required|email',
-            'officerphone'=>'required|min:11',
+        //     'date'=>'required',
+        //     'time'=>'required',
+        //     'cname'=>'required',
+        //     'c_address'=>'required',
+        //     'cell'=>'required|min:11',
+        //     'email'=>'required|email',
+        //     'casetype'=>'required',
+        //     'details'=>'required',
+        //     'dname'=>'required',
+        //     'address'=>'required',
+        //     'policestation'=>'required',
+        //     'issued_at'=>'required',
+        //     'officername'=>'required',
+        //     'officeremail'=>'required|email',
+        //     'officerphone'=>'required|min:11',
             
 
-        ]);
+        // ]);
 
         
 
         Complaintform::create([
             // field name from DB ||  field name from form
+            'nid_no'=>$request->nid_no,
             'date'=>$request->date,
             'time'=>$request->time,
             'cname'=>$request->cname,

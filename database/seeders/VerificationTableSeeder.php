@@ -20,7 +20,8 @@ class VerificationTableSeeder extends Seeder
             'name'=>'User 1',
             'password'=>bcrypt('12345'),
             'email'=>'m@gmail.com',
-            'cell'=>'01922222222'
+            'cell'=>'01922222222',
+            'role'=>'admin'
 
         ]);
 

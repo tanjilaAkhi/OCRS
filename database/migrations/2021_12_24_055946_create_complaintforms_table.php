@@ -15,6 +15,7 @@ class CreateComplaintformsTable extends Migration
     {
         Schema::create('complaintforms', function (Blueprint $table) {
             $table->id();
+            $table->string('nid_no');
             $table->date('date');
             $table->string('time');
             $table->string('cname');

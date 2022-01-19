@@ -61,10 +61,12 @@ background-color: RoyalBlue;
 
     <table class="table">
     <thead>
+    
     <tr>
     <!-- <th scope="col">#</th> -->
+        <th scope="col">NID Number</th>
         <th scope="col">Issue Date</th>
-        <th scope="col">Issue Time</th>
+        <!-- <th scope="col">Issue Time</th> -->
         <th scope="col">Complainer Name</th>
         <th scope="col">Complainer Address</th>
         <th scope="col">Complainer Phone</th>
@@ -86,8 +88,9 @@ background-color: RoyalBlue;
     @foreach($informations as $key=>$information) <!--data database theke table a show korer code (data retrive)--> 
     <tr>
         <!-- <th>{{$key+1}}</th> -->
+        <td>{{$information->nid_no}} </td> 
         <td>{{$information->date}} </td>     
-        <td>{{$information->time}}</td>
+        <!-- <td>{{$information->time}}</td> -->
         <td>{{$information->cname}}</td>
         <td>{{$information->c_address}}</td>
         <td>{{$information->cell}}</td>
@@ -112,7 +115,40 @@ background-color: RoyalBlue;
 <br>
 <form >
         <input class="btn btn-primary" type="button" onClick="PrintDiv();" value="Print">
+        <br>
+        <br>
+        
+       
+        <!DOCTYPE html>
+<html>
+<head>
+<!-- <style>
+a:link {
+  
+  
+  
+  
+  
+  
+}
+
+a:hover, a:active {
+  
+}
+</style> -->
+</head>
+<body>
+<a href="{{route('user.logout')}}" style="margin-left:44%; background-color: red; background-color: #f44336; color: white; padding: 14px 25px; text-align: center; text-decoration: none;display: inline-block;">LOG OUT</a>
+
+</body>
+</html>
+
+            
+        
+
+    </div>
     </form>
+
 
 
     

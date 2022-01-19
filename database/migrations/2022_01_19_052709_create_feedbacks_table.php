@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateNidsTable extends Migration
+class CreateFeedbacksTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,16 @@ class CreateNidsTable extends Migration
      */
     public function up()
     {
-        Schema::create('nids', function (Blueprint $table) {
+        Schema::create('feedbacks', function (Blueprint $table) {
             $table->id();
             $table->string('nid_no');
             $table->string('name');
-            $table->string('fname');
-            $table->string('mname');
             $table->double('cell');
             $table->string('email');
-            $table->string('birthdate');
             $table->string('address');
+            $table->string('dname');
+            $table->string('casetype');
+            $table->string('feedback');
             $table->timestamps();
         });
     }
@@ -34,6 +34,6 @@ class CreateNidsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('nids');
+        Schema::dropIfExists('feedbacks');
     }
 }

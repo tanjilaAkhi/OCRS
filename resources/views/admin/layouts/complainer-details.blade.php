@@ -4,7 +4,7 @@
 @section('content')
     <h1>Complainer Details</h1>
 
-    
+<p>NID Number : {{$list-> nid_no}}</p>  
 <p>Issue Date : {{$list-> date}}</p>
 <p>Issue Time: {{$list->time}}</p>
 <p>Complainer Name: {{$list->cname}}</p>

@@ -25,7 +25,7 @@
     <input type="search" id="form1" class="form-control" name="search" placeholder="Search" arial-label="Search" aria-describedby="search-addon" />
     <!-- <label class="form-label" for="form1">Search</label> -->
   </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary">Search</button>
     <i class="fas fa-search"></i>
   </button>
 </div>
