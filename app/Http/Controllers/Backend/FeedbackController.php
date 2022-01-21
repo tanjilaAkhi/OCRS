@@ -17,8 +17,8 @@ class FeedbackController extends Controller
         // dd($search);
         // dd(request()->all());
         if ($search) {
-            $lists = Feedback::where('name', 'Like', '%' . $search . '%')
-                ->orWhere('name', 'like', '%' . $search . '%')->get();
+            $Feedbacks = Feedback::where('policestation', 'Like', '%' . $search . '%')
+                ->orWhere('policestation', 'like', '%' . $search . '%')->get();
                 // dd('in if');
             return view('admin.layouts.feedback-list', compact('Feedbacks'));
         }
@@ -41,13 +41,11 @@ class FeedbackController extends Controller
         //validation
          $request->validate ([
 
-          'nid_no'=>'required|min:13',
-         'name'=>'required',
-         'cell'=>'required',
          'email'=>'required|email',
-         'address'=>'required',
-         'dname'=>'required',
+         'name'=>'required',
          'casetype'=>'required',
+         'policestation'=>'required',
+         'officername'=>'required',
          'feedback'=>'required',
        
 
@@ -57,13 +55,11 @@ class FeedbackController extends Controller
         // dd($request->all());
         Feedback::create([
             // field name from DB ||  field name from form
-            'nid_no'=>$request->nid_no,
-            'name'=>$request->name,
-            'cell'=>$request->cell,
             'email'=>$request->email,
-            'address'=>$request->address,
-            'dname'=>$request->dname,
+            'name'=>$request->name,
             'casetype'=>$request->casetype,
+            'policestation'=>$request->policestation,
+            'officername'=>$request->officername,
             'feedback'=>$request->feedback,
             
         ]);
@@ -103,13 +99,11 @@ class FeedbackController extends Controller
         $Feedback = Feedback::find($id);
         if ($Feedback) {
             $Feedback->update([
-                'nid_no'=>$request->nid_no,
+                'email'=>$request->email,
             'name'=>$request->name,
-            'cell'=>$request->cell,
-            'email'=>$request->email,
-            'address'=>$request->address,
-            'dname'=>$request->dname,
             'casetype'=>$request->casetype,
+            'policestation'=>$request->policestation,
+            'officername'=>$request->officername,
             'feedback'=>$request->feedback,
             ]);
             return redirect()->route('admin.feedbacks');

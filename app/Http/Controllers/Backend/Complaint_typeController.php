@@ -15,8 +15,8 @@ class Complaint_typeController extends Controller
         // dd($search);
         // dd(request()->all());
         if ($search) {
-            $lists = complainttype::where('type', 'Like', '%' . $search . '%')
-                ->orWhere('type', 'like', '%' . $search . '%')->get();
+            $types = complainttype::where('casetype', 'Like', '%' . $search . '%')
+                ->orWhere('casetype', 'like', '%' . $search . '%')->get();
                 // dd('in if');
             return view('admin.layouts.complaint_type-list', compact('types'));
         }

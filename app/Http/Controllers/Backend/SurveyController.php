@@ -17,7 +17,7 @@ class SurveyController extends Controller
         // dd($search);
         // dd(request()->all());
         if ($search) {
-            $lists = complaintform::where('cname', 'Like', '%' . $search . '%')
+            $monitors = complaintform::where('cname', 'Like', '%' . $search . '%')
                 ->orWhere('cname', 'like', '%' . $search . '%')->get();
                 // dd('in if');
                 return view('admin.layouts.dashboardcontent' ,compact ('monitors'));

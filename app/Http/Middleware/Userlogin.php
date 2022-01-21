@@ -23,5 +23,6 @@ class Userlogin
         else {
             return redirect()->route('user')->with('success','Permission Denied!!');
         }
+        
     }
 }

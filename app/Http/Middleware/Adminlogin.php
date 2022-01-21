@@ -22,7 +22,8 @@ class Adminlogin
             return $next($request);
         }
         else {
-            return redirect()->route('user')->with('success','Permission Denied!!');
+            return redirect()->route('admin.login')->with('success','Permission Denied!!');
         }
+       
     }
 }

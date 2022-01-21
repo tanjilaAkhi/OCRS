@@ -65,7 +65,7 @@ Route::get('/', function () {
 
     //feedback
     Route::get('/feedback',[UserloginController::class,'feedback'])->name('user.feedback');
-    Route::get('/feedback/delete/{feedback_id}',[UserloginController::class,'feedbackDelete'])->name('admin.feedback.delete');
+    // Route::get('/feedback/delete/{feedback_id}',[UserloginController::class,'feedbackDelete'])->name('admin.feedback.delete');
     //end feedback
     
   Route::group(['middleware'=>['auth','Userlogin']],function (){ 

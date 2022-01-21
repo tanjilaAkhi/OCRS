@@ -6,7 +6,7 @@
     <a href="{{route('admin.feedbacks.create')}}" class="btn btn-success">Create new Feedback</a>
 
     <!-- search er part -->
-<form action="{{route('admin.complaint_types')}}">
+<form action="{{route('admin.feedbacks')}}">
 <div class="input-group rounded mt-3 mb-2">
   <div class="form-outline">
     <input type="search" id="form1" class="form-control" name="search" placeholder="Search" arial-label="Search" aria-describedby="search-addon" />
@@ -23,13 +23,11 @@
     <thead>
     <tr>
         <th scope="col">#</th>
-        <th scope="col">NID No</th>
-        <th scope="col">Name</th>
-        <th scope="col">Cell</th>
         <th scope="col">Email</th>
-        <th scope="col">Address</th>
-        <th scope="col">Defandent Name</th>
+        <th scope="col">Complainer Name</th>
         <th scope="col">Case Type</th>
+        <th scope="col">Police Station</th>
+        <th scope="col">Responsible Officer Name</th>
         <th scope="col">Feedback</th>
         <th>Action</th>
         
@@ -40,13 +38,11 @@
     
     <tr>
         <th>{{$key+1}}</th>
-        <td>{{$Feedback->nid_no}}</td>
-        <td>{{$Feedback->name}}</td>
-        <td>{{$Feedback->cell}}</td>
         <td>{{$Feedback->email}}</td>
-        <td>{{$Feedback->address}}</td>
-        <td>{{$Feedback->dname}}</td>
+        <td>{{$Feedback->name}}</td>
         <td>{{$Feedback->casetype}}</td>
+        <td>{{$Feedback->policestation}}</td>
+        <td>{{$Feedback->officername}}</td>
         <td>{{$Feedback->feedback}}</td>
         
         <td ><a  class="btn btn-success" href="{{route('admin.feedback.details',$Feedback->id)}}">View</a></td>

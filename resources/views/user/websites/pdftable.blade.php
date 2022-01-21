@@ -138,7 +138,7 @@ a:hover, a:active {
 </style> -->
 </head>
 <body>
-<a href="{{route('user.logout')}}" style="margin-left:44%; background-color: red; background-color: #f44336; color: white; padding: 14px 25px; text-align: center; text-decoration: none;display: inline-block;">LOG OUT</a>
+<button><a href="{{route('user.logout')}}" style="margin-left:44%; background-color: red; background-color: #f44336; color: white; padding: 14px 25px; text-align: center; text-decoration: none;display: inline-block;">LOG OUT</a></button>
 
 </body>
 </html>

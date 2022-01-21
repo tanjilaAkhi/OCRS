@@ -26,6 +26,29 @@ class UserController extends Controller
     {
 
 //  dd($request->all());
+// //validation
+$request->validate([
+
+    'nid_no'=>'required|numeric|digits:13',
+    'date'=>'required',
+    'time'=>'required',
+    'cname'=>'required',
+    'c_address'=>'required',
+    'cell'=>'required|numeric|max:11| min:9',
+    'email'=>'required|email',
+    'casetype'=>'required',
+    'details'=>'required',
+    'dname'=>'required',
+    'address'=>'required',
+    'policestation'=>'required',
+    'issued_at'=>'required',
+    'officername'=>'required',
+    'officeremail'=>'required|email',
+    'officerphone'=>'required|numeric|max:11| min:9',
+    
+
+]);
+
         //picture uploading
         $image_name=null;
         //              step 1: check image exist in this request.
@@ -41,28 +64,7 @@ class UserController extends Controller
                          }
         //end picture uploading
 
-        //validation
-        // $request->validate([
-
-        //     'date'=>'required',
-        //     'time'=>'required',
-        //     'cname'=>'required',
-        //     'c_address'=>'required',
-        //     'cell'=>'required|min:11',
-        //     'email'=>'required|email',
-        //     'casetype'=>'required',
-        //     'details'=>'required',
-        //     'dname'=>'required',
-        //     'address'=>'required',
-        //     'policestation'=>'required',
-        //     'issued_at'=>'required',
-        //     'officername'=>'required',
-        //     'officeremail'=>'required|email',
-        //     'officerphone'=>'required|min:11',
-            
-
-        // ]);
-
+        
         
 
         Complaintform::create([
