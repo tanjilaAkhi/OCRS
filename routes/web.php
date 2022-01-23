@@ -67,6 +67,15 @@ Route::get('/', function () {
     Route::get('/feedback',[UserloginController::class,'feedback'])->name('user.feedback');
     // Route::get('/feedback/delete/{feedback_id}',[UserloginController::class,'feedbackDelete'])->name('admin.feedback.delete');
     //end feedback
+
+    //DMP services
+    Route::get('/assistance-to-the-victim',[UserloginController::class,'assistancevictim'])->name('user.assistance-to-the-victim');
+    Route::get('/day-care-center',[UserloginController::class,'daycare'])->name('user.day-care-center');
+    Route::get('/in-case-of-fire-outbreak',[UserloginController::class,'fireoutbreak'])->name('user.in-case-of-fire-outbreak');
+    Route::get('/personal-security',[UserloginController::class,'personalsecurity'])->name('user.personal-security');
+    Route::get('/police-blood-bank',[UserloginController::class,'policebloodbank'])->name('user.police-blood-bank');
+   
+    //end DMP serivces
     
   Route::group(['middleware'=>['auth','Userlogin']],function (){ 
     
@@ -87,10 +96,10 @@ Route::get('/', function () {
 
 
 });
-//end user panel related
+
 });
 
-
+//end user panel related
        
 
 //admin panel related
@@ -113,7 +122,9 @@ Route::post('/login',[LoginController::class,'login'])->name('admin.do.login');
     //sign out
     Route::get('/logout',[LoginController::class,'logout'])->name('admin.logout');
     //end sign out
-
+//admin profile
+Route::get('/profile',[LoginController::class,'profile'])->name('admin.profile');
+//end admin profile
 
     //pilce station//
     Route::get('/stations',[PolicestationController::class,'policestationList'])->name('admin.stations');//list show koranor jonno

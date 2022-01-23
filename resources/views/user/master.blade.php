@@ -163,7 +163,13 @@ div#w4pl-inner-8886 li {
 
 </head>
 
-
+<!-- confirmation with sms   -->
+@if(session('success'))
+<div class="alert alert-success">
+	{!! session('success')!!}
+</div>
+@endif
+    
 
      
 
@@ -239,7 +245,7 @@ div#w4pl-inner-8886 li {
 
                     
 
-                
+            
 
                 
 
@@ -266,6 +272,7 @@ div#w4pl-inner-8886 li {
 
 
 
+
     <div id="content" class="eightcol first ghost blogger">
     
 		<div class="item_inn p-border post-5464 attachment type-attachment status-inherit hentry">
@@ -279,7 +286,7 @@ div#w4pl-inner-8886 li {
                          <div class="col-sm-5" >
                             <h3>Which is required to apply Case</h3>
                             <div class="col-lg-12">
-                                <p><i class="fa fa-snowflake-o"></i> Your national identity card number</p>
+                                <p><i class="fa fa-snowflake-o"></i> Need to register first and login</p>
                                 <p><i class="fa fa-snowflake-o"></i> Complainer Details</p>
                                 <p><i class="fa fa-snowflake-o"></i> Complaint Details</p>
                                 <p><i class="fa fa-snowflake-o"></i> Defandant information</p>
@@ -300,7 +307,7 @@ div#w4pl-inner-8886 li {
                                 <p class="step" style="color:#FFF!important;"><i class="fa fa-hand-o-right" style="color:#FFF!important;"></i> First Step </p>
                             </div>
                             <div class="col-lg-12">
-                                <p><i class="fa fa-snowflake-o"></i>Submit your national identity card number to verify your identity  </p>
+                                <p><i class="fa fa-snowflake-o"></i>Fillup your registration information to verify your login verification  </p>
                                 
                             </div>
                             <br />

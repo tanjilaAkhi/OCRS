@@ -100,14 +100,14 @@ $(".input").focusout(function(){
 });
     </style>
 
-@if(session('success'))
-<div class="alert alert-success">
-	{!! session('success')!!}
-</div>
-@endif
+
+
+
 
 <form action="{{route('admin.registrations.submit')}}" method="POST">
     <h1>User registration Form</h1>
+
+    
     @csrf
 
   <label>

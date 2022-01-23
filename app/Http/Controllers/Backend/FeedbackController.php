@@ -81,7 +81,7 @@ class FeedbackController extends Controller
     public function feedbackDelete($id)
     {
     Feedback::find($id)->delete();
-       return redirect()->back()->with('success','Record is Deleted.');
+       return redirect()->back();
     }
 
     public function feedbackEdit($id){
@@ -106,7 +106,7 @@ class FeedbackController extends Controller
             'officername'=>$request->officername,
             'feedback'=>$request->feedback,
             ]);
-            return redirect()->route('admin.feedbacks');
+            return redirect()->route('admin.feedbacks')->with('success','Record is Updated.');
         }
     }
 

@@ -28,7 +28,7 @@ class LoginController extends Controller
         
                 if(Auth::attempt($userInfo)){
                    
-                    return redirect()->route('admin')->with('message','Login successful.');
+                    return redirect()->route('admin')->with('alert','Login successful.');
                 }
                 return redirect()->route('admin.login')->with('sms','Invalid user credentials');
            
@@ -39,6 +39,12 @@ class LoginController extends Controller
         Auth::logout();
         return redirect()->route('admin.login')->with('message','Logging out.');
     }
+
+    public function profile()
+    {
+        return view('admin.partials.adminprofile');
+    }
+    
     
 
 

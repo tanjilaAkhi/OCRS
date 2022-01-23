@@ -89,6 +89,20 @@ button{
 
 <h1 style="color: White; text-align:center; " >Make a complaint</h1>
 
+<!-- confirmation with sms   -->
+@if(session('message'))
+<div class="alert alert-success">
+	{!! session('message')!!}
+</div>
+@endif
+
+
+@if(session('sms'))
+<div class="alert alert-danger">
+	{!! session('sms')!!}
+</div>
+@endif
+
 <div class="container">
   <div class="row">
   

@@ -87,7 +87,7 @@ class PolicestationController extends Controller
     public function policestationDelete($station_id)
     {
        policestation::find($station_id)->delete();
-       return redirect()->back()->with('success','Policestation is Deleted.');
+       return redirect()->back();
     }
 
     public function policestationEdit($id){
@@ -115,7 +115,7 @@ class PolicestationController extends Controller
             'officeremail'=>$request->officeremail,
             'officerphone'=>$request->officerphone,
             ]);
-            return redirect()->route('admin.stations');
+            return redirect()->route('admin.stations')->with('success','Record is Updated.');
         }
     }
 

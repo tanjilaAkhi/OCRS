@@ -5,6 +5,14 @@
     <h1>Feedback Table</h1>
     <a href="{{route('admin.feedbacks.create')}}" class="btn btn-success">Create new Feedback</a>
 
+<!-- confirmation with sms   -->
+@if(session('success'))
+<div class="alert alert-success">
+	{!! session('success')!!}
+</div>
+@endif
+
+
     <!-- search er part -->
 <form action="{{route('admin.feedbacks')}}">
 <div class="input-group rounded mt-3 mb-2">

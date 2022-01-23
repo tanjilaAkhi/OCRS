@@ -9,6 +9,13 @@
     <h1>Police Station list</h1>
     <a href="{{route('admin.stations.create')}}" class="btn btn-success">Create new Police Station</a>
 
+<!-- confirmation with sms   -->
+@if(session('success'))
+<div class="alert alert-success">
+	{!! session('success')!!}
+</div>
+@endif
+
 <!-- search er part -->
 <form action="{{route('admin.stations')}}">
 <div class="input-group rounded mt-3 mb-2">

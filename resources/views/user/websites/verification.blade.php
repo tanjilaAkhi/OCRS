@@ -106,18 +106,21 @@ body{
      <header class="heading"> Login-Form</header><hr></hr>
 	<!---Form starting----> 
 
-@if(session('success'))
+<!-- confirmation with sms   -->
+@if(session('message'))
 <div class="alert alert-success">
-	{!! session('success')!!}
+	{!! session('message')!!}
 </div>
 @endif
 
 
-@if(session('error'))
+@if(session('sms'))
 <div class="alert alert-danger">
-	{!! session('error')!!}
+	{!! session('sms')!!}
 </div>
 @endif
+
+
 
 
 

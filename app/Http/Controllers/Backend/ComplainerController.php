@@ -40,7 +40,7 @@ $search = $request->query('search');
     public function complainerDelete($complainer_id)
     {
        complaintform::find($complainer_id)->delete();
-       return redirect()->back()->with('success',' Desired Complaint is Deleted.');
+       return redirect()->back();
     }
     
 

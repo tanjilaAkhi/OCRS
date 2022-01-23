@@ -47,6 +47,21 @@
     <link href="https://getbootstrap.com/docs/5.1/examples/dashboard/dashboard.css" rel="stylesheet">
 </head>
 <body>
+    <!-- confirmation with sms   -->
+    @if(session('alert'))
+<div class="alert alert-success">
+	{!! session('alert')!!}
+</div>
+@endif
+
+
+@if(session('sms'))
+<div class="alert alert-danger">
+	{!! session('sms')!!}
+</div>
+@endif
+
+<!-- end confirmation with sms   -->
 
 
 @include('admin.partials.header')

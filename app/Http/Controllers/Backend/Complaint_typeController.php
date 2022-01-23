@@ -76,7 +76,7 @@ class Complaint_typeController extends Controller
     public function complainttypeDelete($complainttype_id)
     {
        complainttype::find($complainttype_id)->delete();
-       return redirect()->back()->with('success',' Desired Complaint is Deleted.');
+       return redirect()->back();
     }
 
     public function complainttypeEdit($id){
@@ -98,7 +98,7 @@ class Complaint_typeController extends Controller
             'casetype'=>$request->casetype,
             'casedetails'=>$request->casedetails,
             ]);
-            return redirect()->route('admin.complaint_types');
+            return redirect()->route('admin.complaint_types')->with('success',' Data is Updated.');
         }
     }
 

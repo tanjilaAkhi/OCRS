@@ -18,6 +18,15 @@
 <h1>Complaint Type list</h1>
 <a href="{{route('admin.complaint_types.create')}}" class="btn btn-success">Create new Complaint Type</a>
 
+
+<!-- confirmation with sms   -->
+@if(session('success'))
+<div class="alert alert-success">
+	{!! session('success')!!}
+</div>
+@endif
+
+
 <!-- search er part -->
 <form action="{{route('admin.complaint_types')}}">
 <div class="input-group rounded mt-3 mb-2">

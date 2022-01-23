@@ -60,16 +60,42 @@ class UserloginController extends Controller
         else {
             return view('user.websites.userfeedback',compact('reviews'));}
         }
+
+
+
+        //DMP services
+    public function assistancevictim()
+   {
+       return view('user.partials.assistance-to-the-victim');
+   }
+
+   public function daycare()
+   {
+       return view('user.partials.day-care-center');
+   }
+
+   public function fireoutbreak()
+   {
+       return view('user.partials.in-case-of-fire-outbreak');
+   }
+
+   public function personalsecurity()
+   {
+       return view('user.partials.personal-security');
+   }
+
+   public function policebloodbank()
+   {
+       return view('user.partials.police-blood-bank');
+   }
+
+     //end DMP services     
+
     }
     //end feedback code
       
-    // public function feedbackDelete($feedback_id)
-    // {
-    // Feedback::find($feedback_id)->delete();
-    //    return redirect()->route('user')->with('success','Record is Deleted.');
-    // }
 
-          
 
+    
    //form er code
     

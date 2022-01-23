@@ -27,27 +27,28 @@ class UserController extends Controller
 
 //  dd($request->all());
 // //validation
-$request->validate([
+// $request->validate([
 
-    'nid_no'=>'required|numeric|digits:13',
-    'date'=>'required',
-    'time'=>'required',
-    'cname'=>'required',
-    'c_address'=>'required',
-    'cell'=>'required|numeric|max:11| min:9',
-    'email'=>'required|email',
-    'casetype'=>'required',
-    'details'=>'required',
-    'dname'=>'required',
-    'address'=>'required',
-    'policestation'=>'required',
-    'issued_at'=>'required',
-    'officername'=>'required',
-    'officeremail'=>'required|email',
-    'officerphone'=>'required|numeric|max:11| min:9',
+//     'nid_no'=>'required|numeric|digits:13',
+//     'date'=>'required',
+//     'time'=>'required',
+//     'cname'=>'required',
+//     'c_address'=>'required',
+//     'cell'=>'required|numeric|max:11| min:9',
+//     'email'=>'required|email',
+//     'casetype'=>'required',
+//     'details'=>'required',
+//     'dname'=>'required',
+//     'address'=>'required',
+//     'image'=>'required',
+//     'policestation'=>'required',
+//     'issued_at'=>'required',
+//     'officername'=>'required',
+//     'officeremail'=>'required|email',
+//     'officerphone'=>'required|numeric|max:11| min:9',
     
 
-]);
+// ]);
 
         //picture uploading
         $image_name=null;
@@ -122,7 +123,7 @@ $request->validate([
     public function InfoDelete($id)
     {
        complaintform::find($id)->delete();
-       return redirect()->back()->with('success','Policestation is Deleted.');
+       return redirect()->back();
     }
 
 
@@ -142,14 +143,11 @@ $request->validate([
         //validation
         // $request->validate([
 
-        //     'dmp'=>'required',
         //     'name'=>'required',
-        //     'address'=>'required',
-        //     'cell'=>'required|min:11',
+        //     'cell'=>'required|numeric|max:11| min:9',
         //     'email'=>'required|email',
-        //     'officername'=>'required',
-        //     'officeremail'=>'required|email',
-        //     'officerphone'=>'required|min:11',
+        //     'password'=>'required',
+        
 
         // ]);
         // dd($request->all());
@@ -163,7 +161,7 @@ $request->validate([
             
 
         ]);
-        return redirect()->back()->with('success','Registration Successful.');;
+        return redirect()->route('user')->with('success','Registration Successful.');
     }
 
     //end registration
