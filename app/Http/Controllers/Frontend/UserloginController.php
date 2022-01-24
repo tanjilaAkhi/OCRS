@@ -39,7 +39,7 @@ class UserloginController extends Controller
     public function logout()
     {
         Auth::logout();
-        return redirect()->route('user.verification')->with('message','Logging out.');
+        return redirect()->route('main')->with('message','Logging out.');
     }
 
     //feedback code

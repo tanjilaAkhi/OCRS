@@ -24,6 +24,11 @@ class ContactController extends Controller
     }
 
     // end emergencycontact er method calling
-
+    
+    
+    public function main()
+    {
+        return view('main');
+    }
     
 }

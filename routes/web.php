@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Frontend\UserController;
 use App\Http\Controllers\Frontend\UserloginController;
 use App\Http\Controllers\Frontend\ContactController;
+use App\Http\Controllers\MainController;
 
 
 /*
@@ -24,17 +25,15 @@ use App\Http\Controllers\Frontend\ContactController;
 */
 
 
+//main page er code
 
+Route::get('/', function () {
+    return view('main');
+})->name('main');
 
-
-    // Route::group(['prefix'=>'user-portal'],function(){
-    // Route::group(['middleware'=>'auth'],function (){ //middleware applied in the whole section to prevent the unauthorized access
-        // Route::get('/', function () {
-        //     return view('admin.master');
-        // })->name('admin');
-
-
-
+Route::get('/user',[MainController::class,'website'])->name('user');
+Route::get('/admin-portal/login',[MainController::class,'adminlogin'])->name('admin.login');
+//end main page
         
 
 Route::group(['prefix'=>'user'],function(){
@@ -47,10 +46,9 @@ Route::group(['prefix'=>'user'],function(){
 Route::get('/', function () {
     return view('user.master');
 
-
-
 })->name ('user');
-    //Contact
+
+//Contact
     Route::get('/contact',[ContactController::class,'contact'])->name('user.contact');
     //end Contact
 
