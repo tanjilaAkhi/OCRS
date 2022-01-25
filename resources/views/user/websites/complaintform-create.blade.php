@@ -86,6 +86,17 @@ button{
 
 </style>
 
+<!-- validation confirmation sms -->
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+<!-- validation confirmation sms -->
 
 <h1 style="color: White; text-align:center; " >Make a complaint</h1>
 
@@ -190,7 +201,7 @@ button{
             <option> </option>
             
            
-    <optgroup label="Criminal Case(select any on them)">
+    <optgroup label="Police Station(select your local policestation)">
             <option>Ashulia</option>
             <option>Savar</option>
             <option>Turag</option>        

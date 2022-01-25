@@ -1,11 +1,12 @@
-
+<!-- @extends('user.master')
+@section('contents') -->
 <!DOCTYPE html>
 <html>
     <head>
         
 </head>
 <body>
-<img src="{{url('image/blood.PNG')}}" alt="" width="1000" height="400" style ="margin-left:17%;"> 
+<img src="{{url('image/blood.PNG')}}" alt="" width="900" height="300" style ="margin-left:17%;"> 
     <h1 style="text-align:center; ,font-size:200%;"><b>Police Blood Bank</b></h1>
     <p style="margin-left:20%; font-size:140%;">
     Police Blood Bank started its journey on the 12th December, 2010 with a unique concept of helping people by donating blood. Blood donation for saving life has created a milestone in Policing. It was actually the founding stone of turning Police force into Police Service. Blood Bank has flourished more in these years.
@@ -71,3 +72,4 @@ For emergency blood service from the blood bank anyone can contact us. Our emerg
 </p>
 </body>
 <html>
+    <!-- @endsection -->

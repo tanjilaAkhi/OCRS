@@ -29,9 +29,9 @@
     </style>
 
   <!-- confirmation with sms   -->
-    @if(session('message'))
+  @if(session('alert'))
 <div class="alert alert-success">
-	{!! session('message')!!}
+	{!! session('alert')!!}
 </div>
 @endif
 

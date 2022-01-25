@@ -1,13 +1,12 @@
-
-
-
+<!-- @extends('user.master')
+@section('contents') -->
 <!DOCTYPE html>
 <html>
     <head>
         
 </head>
 <body>
-<img src="{{url('image/assistance.PNG')}}" alt="" width="1000" height="400" style ="margin-left:17%;"> 
+<img src="{{url('/assistance.PNG')}}" alt="" width="900" height="300" style ="margin-left:17%;">
     <h1 style="text-align:center;font-size:200%;"><b>Assistance to the victim</b></h1>
     <br>
     <br>
@@ -18,3 +17,4 @@
 </body>
 <html>
 
+<!-- @endsection -->

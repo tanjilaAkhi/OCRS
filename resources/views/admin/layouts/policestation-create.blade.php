@@ -4,16 +4,17 @@
 @section('content')
 
 
-@if($errors->any())
-        <div class="alert alert-danger">
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
-
+<!-- validation confirmation sms -->
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+<!-- validation confirmation sms -->
 
 
     <h1>Create a Police Station</h1>
@@ -22,8 +23,20 @@
         @csrf
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Enter DMP</label>
-            <input name="dmp" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" require>
+            <select name="dmp" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" require>
+            <option> </option>
+           
+    <optgroup label="Dhaka Metro Politon(select accoriding to your area policestation)">
+            <option>Ashulia (123456)</option>
+            <option>Savar (122222)</option>
+            <option>Turag (123333)</option>        
+            <option>Banani (123433)</option>
+            <option>Dhanmondi (123455)</option>
+    </optgroup>
+            </select> 
 
+            
+ 
         </div>
         <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Enter Police Station</label>

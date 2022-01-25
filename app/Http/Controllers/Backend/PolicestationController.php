@@ -48,13 +48,15 @@ class PolicestationController extends Controller
             'dmp'=>'required',
             'name'=>'required',
             'address'=>'required',
-            'cell'=>'required|min:11',
+            'telephone'=>'required|numeric|digits:8',
+            'cell'=>'required|numeric|digits:11',
             'email'=>'required|email',
             'officername'=>'required',
             'officeremail'=>'required|email',
-            'officerphone'=>'required|min:11',
+            'officerphone'=>'required|numeric|digits:11',
 
         ]);
+        
         // dd($request->all());
         policestation::create([
             // field name from DB ||  field name from form

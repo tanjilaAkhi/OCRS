@@ -101,7 +101,17 @@ $(".input").focusout(function(){
     </style>
 
 
-
+<!-- validation confirmation sms -->
+@if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+<!-- validation confirmation sms -->
 
 
 <form action="{{route('admin.registrations.submit')}}" method="POST">
@@ -133,7 +143,7 @@ $(".input").focusout(function(){
   </label>
   <label>
     <p class="label-txt">ENTER YOUR PASSWORD</p>
-    <input name="password" type="text" class="input">
+    <input name="password" type="password" class="input">
     <div class="line-box">
       <div class="line"></div>
     </div>

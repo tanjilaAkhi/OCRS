@@ -68,8 +68,8 @@ background-color: RoyalBlue;
         <th scope="col">Issue Date</th>
         <!-- <th scope="col">Issue Time</th> -->
         <th scope="col">Complainer Name</th>
-        <th scope="col">Complainer Address</th>
-        <th scope="col">Complainer Phone</th>
+        <!-- <th scope="col">Complainer Address</th> -->
+        <!-- <th scope="col">Complainer Phone</th> -->
         <th scope="col">Complainer Email</th>
         <th scope="col">Complaint Type</th>
         <th scope="col">Complaint Details</th>
@@ -78,6 +78,10 @@ background-color: RoyalBlue;
         <th scope="col">Crime Place Photo</th>
         <th scope="col">Police Station Name</th>
         <th scope="col">Issused at</th>
+        <th scope="col">Officer Name</th>
+        <th scope="col">Officer Phone</th>
+        
+
        
         
     </tr>
@@ -92,16 +96,20 @@ background-color: RoyalBlue;
         <td>{{$information->date}} </td>     
         <!-- <td>{{$information->time}}</td> -->
         <td>{{$information->cname}}</td>
-        <td>{{$information->c_address}}</td>
-        <td>{{$information->cell}}</td>
+        <!-- <td>{{$information->c_address}}</td> -->
+        <!-- <td>{{$information->cell}}</td> -->
         <td>{{$information->email}}</td>
         <td>{{$information->casetype}} </td>     
         <td>{{$information->details}}</td>
         <td>{{$information->dname}}</td>
         <td>{{$information->address}}</td>
-        <td>{{$information->image}}</td>
+        <td>
+            <img src="{{url('/uploads/'.$information->image)}}" width="100px" alt="image">
+        </td>
         <td>{{$information->policestation}}</td>
-        <td>{{$information->issued_at}} </td>     
+        <td>{{$information->issued_at}} </td>
+        <td>{{$information->officername}} </td>    
+        <td>{{$information->officerphone}} </td>         
         
         
         
@@ -117,31 +125,10 @@ background-color: RoyalBlue;
         <input class="btn btn-primary" type="button" onClick="PrintDiv();" value="Print">
         <br>
         <br>
-        
+        <div>
+        <button style="margin-left:44%; background-color: red; background-color: #f44336; color: white; padding: 14px 25px; text-align: center; text-decoration: none;display: inline-block;"><a href="{{route('user.logout')}}" >LOG OUT</a></button>
        
-        <!DOCTYPE html>
-<html>
-<head>
-<!-- <style>
-a:link {
-  
-  
-  
-  
-  
-  
-}
-
-a:hover, a:active {
-  
-}
-</style> -->
-</head>
-<body>
-<button><a href="{{route('user.logout')}}" style="margin-left:44%; background-color: red; background-color: #f44336; color: white; padding: 14px 25px; text-align: center; text-decoration: none;display: inline-block;">LOG OUT</a></button>
-
-</body>
-</html>
+</div>
 
             
         

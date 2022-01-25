@@ -27,28 +27,28 @@ class UserController extends Controller
 
 //  dd($request->all());
 // //validation
-// $request->validate([
+$request->validate([
+   
 
-//     'nid_no'=>'required|numeric|digits:13',
-//     'date'=>'required',
-//     'time'=>'required',
-//     'cname'=>'required',
-//     'c_address'=>'required',
-//     'cell'=>'required|numeric|max:11| min:9',
-//     'email'=>'required|email',
-//     'casetype'=>'required',
-//     'details'=>'required',
-//     'dname'=>'required',
-//     'address'=>'required',
-//     'image'=>'required',
-//     'policestation'=>'required',
-//     'issued_at'=>'required',
-//     'officername'=>'required',
-//     'officeremail'=>'required|email',
-//     'officerphone'=>'required|numeric|max:11| min:9',
+    'nid_no'=>'required|numeric|digits:13',
+    'date'=>'required',
+    'time'=>'required',
+    'cname'=>'required',
+    'c_address'=>'required',
+    'cell'=>'required|numeric|digits:11',
+    'email'=>'required|email',
+    'casetype'=>'required',
+    'details'=>'required',
+    'dname'=>'required',
+    'address'=>'required',
+    'policestation'=>'required',
+    'issued_at'=>'required',
+    'officername'=>'required',
+    'officeremail'=>'required|email',
+    'officerphone'=>'required|numeric|digits:11',
     
 
-// ]);
+]);
 
         //picture uploading
         $image_name=null;
@@ -107,7 +107,8 @@ class UserController extends Controller
     }
 
 
-    public function status_solved($id){
+    //monitoring unit er status code
+    public function status($id){
         $monitor = complaintform::find($id);
         if($monitor->case_status)
         {
@@ -116,9 +117,10 @@ class UserController extends Controller
             ]);
         }
     
-        return redirect()->back()->with('success','Case Solved');
+        return redirect()->back();
     }
 
+//end status code
 
     public function InfoDelete($id)
     {
@@ -141,13 +143,17 @@ class UserController extends Controller
        
 
         //validation
-        // $request->validate([
-
-        //     'name'=>'required',
-        //     'cell'=>'required|numeric|max:11| min:9',
-        //     'email'=>'required|email',
-        //     'password'=>'required',
+        // $validated=$request->validate([
+            $request->validate([
+                'name'=>'required',
+            'cell'=>'required|numeric|digits:11',
+            'email'=>'required|email',
+            'password'=>'required',
         
+            ]);
+        //     $validator = User::make($request->all(), [
+
+            
 
         // ]);
         // dd($request->all());

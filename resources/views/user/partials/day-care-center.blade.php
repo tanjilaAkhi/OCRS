@@ -1,11 +1,12 @@
-
+<!-- @extends('user.master')
+@section('contents') -->
 <!DOCTYPE html>
 <html>
     <head>
         
 </head>
 <body>
-<img src="{{url('image/daycare.PNG')}}" alt="" width="1000" height="400" style ="margin-left:17%;"> 
+<img src="{{url('image/daycare.PNG')}}" alt="" width="900" height="300" style ="margin-left:17%;"> 
     <h1 style="text-align:center; font-size:200%;"><b>Day Care Center</b></h1>
     <br>
     <h3 style="margin-left:20%;">Introduction :</h3>
@@ -45,3 +46,5 @@
 </p>
 </body>
 <html>
+
+<!-- @endsection -->

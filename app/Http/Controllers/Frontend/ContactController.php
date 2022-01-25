@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Frontend;
 use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use App\Models\Notice;
 
 class ContactController extends Controller
 {
@@ -30,5 +31,15 @@ class ContactController extends Controller
     {
         return view('main');
     }
+
+    // notice er method calling
+    public function notice()
+    {
+        $Notices = Notice::all();
+        return view('user.websites.notice',compact('Notices'));
+      
+    }
+
+    // end notice er method calling
     
 }

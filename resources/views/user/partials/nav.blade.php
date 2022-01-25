@@ -1,6 +1,5 @@
 
-
-<ul id="main-nav" class="nav rad tmnf_custom_menu"><li id="menu-item-5098" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="">Home</a></li>
+<ul id="main-nav" class="nav rad tmnf_custom_menu"><li id="menu-item-5098" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="{{route('user')}}">Home</a></li>
 
 <li id="menu-item-5677" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="#">About</a>
 <ul class="sub-menu">
@@ -34,9 +33,10 @@
 	
 </ul>
 </li>
+<li id="menu-item-5677" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="{{route('user.notice')}}">Notice</a></LI>
 
-<!-- <li id="menu-item-5677" ><a href="">Landing Page</a></li> -->
 </ul>
+
 
 
 

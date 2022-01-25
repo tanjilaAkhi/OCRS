@@ -4,6 +4,7 @@ use App\Http\Controllers\Backend\PolicestationController;
 use App\Http\Controllers\Backend\Complaint_typeController;
 use App\Http\Controllers\Backend\ComplainerController;
 use App\Http\Controllers\Backend\FeedbackController;
+use App\Http\Controllers\Backend\NoticeController;
 use App\Http\Controllers\Backend\LoginController;
 use App\Http\Controllers\Backend\SurveyController;
 use Illuminate\Support\Facades\Route;
@@ -74,6 +75,14 @@ Route::get('/', function () {
     Route::get('/police-blood-bank',[UserloginController::class,'policebloodbank'])->name('user.police-blood-bank');
    
     //end DMP serivces
+
+    //notice
+    Route::get('/notice',[ContactController::class,'notice'])->name('user.notice');
+    
+    //end notice
+    //status
+    Route::get('/form/status/solved/{id}',[UserController::class,'status'])->name('user.form.status.solved');
+    //end status
     
   Route::group(['middleware'=>['auth','Userlogin']],function (){ 
     
@@ -84,7 +93,6 @@ Route::get('/', function () {
     //complaint registration
     Route::get('/form/create',[UserController::class,'caseformCreate'])->name('user.form.create');// form create korer jonno
     Route::post('/form/store',[UserController::class,'store'])->name('user.form.store');//database a data submit korer  jonno
-    Route::get('/form/status/Solved//{id}',[UserController::class,'status_solved'])->name('user.form.status.solved');
     Route::get('/form/delete/{id}',[UserController::class,'InfoDelete'])->name('admin.info.delete');
     Route::get('/form/confirmation',[UserController::class,'confirmation'])->name('user.form.confirmation');
     Route::get('/form/table',[UserController::class,'complainertable'])->name('admin.complainer.table');
@@ -175,6 +183,17 @@ Route::get('/profile',[LoginController::class,'profile'])->name('admin.profile')
     Route::get('/feedbacks/edit/{id}',[FeedbackController::class,'feedbackEdit'])->name('admin.feedback.edit');
     Route::put('/feedbacks/update/{id}',[FeedbackController::class,'feedbackUpdate'])->name('admin.feedback.update');
     //End Feedback Route
+
+
+    //Notice Route
+   
+    Route::get('/notices',[NoticeController::class,'noticeList'])->name('admin.notices');//list show koranor jonno
+    Route::get('/notices/create',[NoticeController::class,'noticeCreate'])->name('admin.notices.create');// form create korer jonno
+    Route::post('/notices/store',[NoticeController::class,'store'])->name('admin.notices.store');//database a data submit korer  jonno
+    Route::get('/notices/delete/{id}',[NoticeController::class,'noticeDelete'])->name('admin.notices.delete');
+    Route::get('/notices/edit/{id}',[NoticeController::class,'noticeEdit'])->name('admin.notices.edit');
+    Route::put('/notices/update/{id}',[NoticeController::class,'noticeUpdate'])->name('admin.notices.update');
+    //End Notice Route
     
 });//end admin panel
 

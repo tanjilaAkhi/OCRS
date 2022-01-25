@@ -20,7 +20,7 @@ class CreateComplaintformsTable extends Migration
             $table->string('time');
             $table->string('cname');
             $table->string('c_address');
-            $table->integer('cell');
+            $table->bigInteger('cell');
             $table->string('email');
             $table->string('casetype');
             $table->string('details');

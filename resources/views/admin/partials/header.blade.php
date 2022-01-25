@@ -5,7 +5,10 @@
     </button>
     
     <div class="navbar-nav">
+
+    
         <div class="nav-item text-nowrap">
+            <!-- if(auth()->admin) -->
             <a class="nav-link px-3" href="{{route('admin.logout')}}">Sign out</a>
         </div>
     </div>
