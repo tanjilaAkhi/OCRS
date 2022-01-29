@@ -5,7 +5,7 @@
 
 <div class="cotn_principal">
 <div class="cont_centrar">
-
+<h1 style="text-align:center; color:white;">Online Crime Reporting System</h1>
   <div class="cont_login">
 <div class="cont_info_log_sign_up">
       <div class="col_md_login">
@@ -17,6 +17,7 @@
 	{!! session('message')!!}
 </div>
 @endif
+
 
 
 

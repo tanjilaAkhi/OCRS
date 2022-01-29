@@ -83,8 +83,11 @@ Route::get('/', function () {
     //status
     Route::get('/form/status/solved/{id}',[UserController::class,'status'])->name('user.form.status.solved');
     //end status
+
+    Route::get('/form/confirmation',[UserController::class,'confirmation'])->name('user.form.confirmation');
+    Route::get('/form/table',[UserController::class,'complainertable'])->name('admin.complainer.table');
     
-  Route::group(['middleware'=>['auth','Userlogin']],function (){ 
+    Route::group(['middleware'=>['auth','Userlogin']],function (){ 
     
     //sign out
     Route::get('/logout',[UserloginController::class,'logout'])->name('user.logout');
@@ -94,8 +97,7 @@ Route::get('/', function () {
     Route::get('/form/create',[UserController::class,'caseformCreate'])->name('user.form.create');// form create korer jonno
     Route::post('/form/store',[UserController::class,'store'])->name('user.form.store');//database a data submit korer  jonno
     Route::get('/form/delete/{id}',[UserController::class,'InfoDelete'])->name('admin.info.delete');
-    Route::get('/form/confirmation',[UserController::class,'confirmation'])->name('user.form.confirmation');
-    Route::get('/form/table',[UserController::class,'complainertable'])->name('admin.complainer.table');
+   
     //end complaint registration 
 
 
